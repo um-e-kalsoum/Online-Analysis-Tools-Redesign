@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bioinformatics Tutorials - Resource Hub</title>
+  <title>DNA Sequence Analysis - Resource Hub</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,47 +18,43 @@
       </ul>
     </nav>
     <div class="search-container">
-    <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
-    <div id="search-results" class="search-results"></div>
-  </div>
+      <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
+      <div id="search-results" class="search-results"></div>
+    </div>
   </header>
 
   <div class="breadcrumbs">
-  <a href="index.html">Home</a> › 
-  <a href="index.html#categories">Categories</a> › 
-  <span>Bioinformatic Tutorials</span>
-</div>
+    <a href="index.html">Home</a> › 
+    <a href="index.html#categories">Categories</a> › 
+    <span>DNA Sequence Analysis</span>
+  </div>
 
   <main class="content">
-    <h1>Bioinformatics Tutorials</h1>
+    <h1>DNA Sequence Analysis</h1>
+    <p>
+      This section provides links to tools, resources, and software related to the analysis of DNA sequences.
+      These may include sequence alignment, motif search, codon usage, and other genomic analysis applications.
+      Each subcategory below represents a distinct area of DNA sequence analysis for exploration.
+    </p>
 
-    <section class="tutorial-section">
-      <h2>Suggested Resources</h2>
-      <ul>
-        <li><a href="https://google.com" target="_blank">Online Lectures on Bioinformatics</a> 
-          <em>(Martin Vingron, Computational Molecular Biology, Max Planck Institute for Molecular Genetics, Berlin, Germany)</em>
-        </li>
-        <li><a href="https://google.com" target="_blank">Virtual Mass Spectrometry Laboratory</a> 
-          <em>(Carnegie Mellon University, University of Pittsburgh, National Science Foundation)</em> — an interactive educational tool site with tutorials and case studies.
-        </li>
-        <li>BLAST Resources — including <a href="https://google.com" target="_blank">Digital World Biology</a>, 
-          <a href="https://google.com" target="_blank">John Hopkins</a>, or NCBI BLAST/PSI-BLAST tutorials.
-        </li>
-      </ul>
-    </section>
-
-    <section class="tutorial-section">
-      <h2>Equipment Simulations</h2>
-      <ul> 
-      <li><a href="https://google.com" target="_blank">View Simulations</a></li>
-      </ul>
-    </section>
-
-    <section class="tutorial-section">
-      <h2>Glossary</h2>
-      <ul>
-        <li><a href="https://google.com" target="_blank">BIOL419/519</a> or <a href="https://google.com" target="_blank">Talking Glossary of Genetic Terms</a></li>
-      </ul>
+    <section class="categories">
+      <h2>Subcategories</h2>
+      <div class="pill-container">
+        <a href="#" class="pill">Alignments</a>
+        <a href="#" class="pill">Convert Sequence</a>
+        <a href="#" class="pill">Composition</a>
+        <a href="#" class="pill">DNA Motifs</a>
+        <a href="#" class="pill">Homology Searches</a>
+        <a href="#" class="pill">Melting Temperature</a>
+        <a href="#" class="pill">PCR Primer Design</a>
+        <a href="#" class="pill">Phylogeny</a>
+        <a href="#" class="pill">Promoters</a>
+        <a href="#" class="pill">Repeats & Secondary Structure</a>
+        <a href="#" class="pill">Restrictioon Endonuclease Sites</a>
+        <a href="#" class="pill">Translation (General)</a>
+        <a href="#" class="pill">Translation (Eukaryotic Genes)</a>
+        <a href="#" class="pill">Transcriptional Factors</a>
+      </div>
     </section>
 
     <p class="updated"><strong>Updated:</strong> October, 2025</p>
@@ -71,10 +67,10 @@
 <script>
   const pages = [
     { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
-    { name: "Carbohydrates", link: "#" },
-    { name: "DNA Sequence Analysis", link: "#" },
+    { name: "Carbohydrates", link: "carbohydrates.html" },
+    { name: "DNA Sequence Analysis", link: "dna-sequencing.html" },
     { name: "Genomics", link: "genomics.html" },
-    { name: "Metabolomics", link: "#" },
+    { name: "Metabolomics", link: "metabolomics.html" },
     { name: "Protein Sequence Analysis", link: "#" },
     { name: "RNA Sequence Analysis", link: "#" },
     { name: "Transcription Analysis", link: "#" },
@@ -86,10 +82,8 @@
   const searchBar = document.getElementById("search-bar");
   const resultsDiv = document.getElementById("search-results");
 
-  //only show results when typing
   searchBar.addEventListener("input", searchSite);
 
-  //hide dropdown when clicking outside
   document.addEventListener("click", (e) => {
     if (!e.target.closest(".search-container")) {
       resultsDiv.innerHTML = "";
@@ -100,7 +94,7 @@
     const input = searchBar.value.toLowerCase().trim();
     resultsDiv.innerHTML = "";
 
-    if (input.length === 0) return; //do nothing when empty
+    if (input.length === 0) return;
 
     const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
 

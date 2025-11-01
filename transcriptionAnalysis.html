@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transcription Analysis - Resource Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">Resource Hub</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="index.html#categories">Categories</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </header>
+
+  <div class="breadcrumbs">
+    <a href="index.html">Home</a> › 
+    <a href="index.html#categories">Categories</a> › 
+    <span>Transcription Analysis</span>
+  </div>
+
+  <main class="content">
+    <h1>Transcriptomics</h1>
+    <p><strong>N.B.</strong> This is outside my area of expertise. Please advise about sites to recommend.</p>
+
+    <section class="tutorial-section">
+      <ul>
+        <li><a href="https://google.com" target="_blank">DOGMA</a> — a web server for proteome and transcriptome quality assessment. The data of interest are evaluated based on a comparison with a core set of conserved protein domains and domain arrangements. Depending on the studied species, DOGMA offers precomputed core sets for different phylogenetic clades, including Bacteria and Archaea. (<em>Reference: Kemena C et al. (2019) Nucleic Acids Res. <strong>47(W1)</strong>: W507–W510.</em>)</li>
+
+        <li><a href="https://google.com" target="_blank">Babelomics 5</a> — offers user-friendly access to a full range of methods covering (i) primary data analysis, (ii) a variety of tests for different experimental designs, and (iii) enrichment and network analysis algorithms for the interpretation of gene expression results. (<em>Reference: Alonso R et al. (2015) Nucleic Acids Res. <strong>43(W1)</strong>: W117–W121.</em>)</li>
+
+        <li><a href="https://google.com" target="_blank">ErmineJ</a> — performs analyses of gene sets in high-throughput genomics data such as gene expression profiling. Designed for biologists with minimal informatics background to identify pathways that are “doing something interesting.” (<em>Reference: Gillis J et al. (2010) Nat Protoc. <strong>5(6)</strong>: 1148–1159.</em>)</li>
+
+        <li><a href="https://google.com" target="_blank">HPC-T-Annotator</a> — a tool for de novo transcriptome homology annotation using HPC infrastructures. Configuration is done via a web interface, and the resulting data can be viewed in Python notebooks. (<em>Reference: Arcioni L et al. (2024) BMC Bioinformatics. <strong>25(1)</strong>: 272.</em>)</li>
+
+        <li><a href="https://google.com" target="_blank">Cyber-T</a> — for 2-dye data (cy3/cy5-labelled cDNA). Control+Experimental is for Affymetrix-based data with separate control and experimental arrays. (<em>Reference: Kayala M.A. & Baldi P. (2012) Nucleic Acids Res. <strong>40(W1)</strong>: W553–W559.</em>)</li>
+
+        <li><a href="https://google.com" target="_blank">NIA Array Analysis Tool</a> — for microarray data, providing features like false discovery rate adjustment, ANOVA-based expression pattern analysis, PCA visualization, and 3D clustering. (<em>Reference: Sharov A.A. et al. (2005) Bioinformatics. <strong>21</strong>: 2548–2549.</em>)</li>
+
+        <li><a href="https://google.com" target="_blank">TRAPID</a> — an online tool for de novo transcriptome analysis, allowing functional and comparative analyses through a highly optimized pipeline. (<em>Reference: Van Bel M. et al. (2013) Genome Biol. <strong>14(12)</strong>: R134.</em>)</li>
+
+        <li><a href="https://google.com" target="_blank">TRUFA</a> — (TRAnscripome User-Friendly Analysis), a web-based open informatics platform for RNA-seq analysis and transcript quantification. Requires registration. (<em>Reference: Kornobis E et al. (2015) Evol Bioinform Online. <strong>11</strong>: 97–104.</em>)</li>
+
+        <li><a href="https://google.com" target="_blank">Chipster</a> — a user-friendly software for analyzing high-throughput data such as NGS and microarrays, with over 360 analysis tools and reference genomes. </li>
+      </ul>
+    </section>
+
+    <p class="updated"><strong>Updated:</strong> August, 2025</p>
+  </main>
+
+  <footer>
+    <p>© 2025 Internet Resources for Molecular Biologists</p>
+  </footer>
+
+<script>
+  const pages = [
+    { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
+    { name: "Carbohydrates", link: "carbohydrates.html" },
+    { name: "DNA Sequence Analysis", link: "dna-sequencing.html" },
+    { name: "Genomics", link: "genomics.html" },
+    { name: "Metabolomics", link: "metabolomics.html" },
+    { name: "Protein Sequence Analysis", link: "protein-sequence.html" },
+    { name: "RNA Sequence Analysis", link: "rna-sequence.html" },
+    { name: "Transcription Analysis", link: "transcription-analysis.html" },
+    { name: "Miscellaneous", link: "#" },
+    { name: "Software", link: "#" },
+    { name: "GenBank", link: "#" }
+  ];
+
+  const searchBar = document.getElementById("search-bar");
+  const resultsDiv = document.getElementById("search-results");
+
+  searchBar.addEventListener("input", searchSite);
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-container")) {
+      resultsDiv.innerHTML = "";
+    }
+  });
+
+  function searchSite() {
+    const input = searchBar.value.toLowerCase().trim();
+    resultsDiv.innerHTML = "";
+
+    if (input.length === 0) return;
+
+    const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
+
+    if (filtered.length > 0) {
+      filtered.forEach(page => {
+        const link = document.createElement("a");
+        link.href = page.link;
+        link.textContent = page.name;
+        link.target = "_self";
+        resultsDiv.appendChild(link);
+      });
+    } else {
+      resultsDiv.innerHTML = "<p>No matches found.</p>";
+    }
+  }
+</script>
+
+</body>
+</html>

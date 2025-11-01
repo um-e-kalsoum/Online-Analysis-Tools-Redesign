@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbohydrates - Resource Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">Resource Hub</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="index.html#categories">Categories</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </header>
+
+  <div class="breadcrumbs">
+    <a href="index.html">Home</a> › 
+    <a href="index.html#categories">Categories</a> › 
+    <span>Carbohydrates</span>
+  </div>
+
+  <main class="content">
+    <h1>Carbohydrates</h1>
+
+    <p>
+      It is important to recognize the great diversity of monosaccharides commonly encountered in animals, plants, and microbes, as well as to organize them in a visually interesting style that also emphasizes their similarities and relatedness.
+      This article discusses the nature of building blocks, monosaccharides, and monosaccharide derivatives—terms commonly used in discussing “glycomolecules.”
+    </p>
+
+    <p>
+      See Cummings’ 
+      <a href="#">Periodic Table of Monosaccharides</a> 
+      (<em>Reference: Cummings RD (2024) Glycobiology, 34(1): cwAd088</em>). 
+      <a href="#">GlyTouCan</a> is the international glycan structure repository, a freely available registry assigning unique accession numbers to glycan structures globally.
+      <a href="#">GNOME</a> provides semantic browsing and classification for glycan structures.
+    </p>
+
+    <section class="tutorial-section">
+      <ul>
+        <li><a href="#">GlyGen</a> — integrates global carbohydrate and glycoconjugate data from multiple international databases. (<em>Reference: York WS et al. (2019) Glycobiology 30(2): 72–73</em>).</li>
+        <li><a href="#">GLYCAM</a> (<em>Robert J. Woods, Complex Carbohydrate Research Center, University of Georgia</em>) — provides visualization tools for glycan-antibody and protein-glycosylation analysis.</li>
+        <li><a href="#">CSDB</a> (Carbohydrate Structure Database) — merged from BCSDB and PFCSDB, includes manually curated carbohydrate structures and literature. (<em>Reference: Ph.V. Toukach & K.S. Egorova, Nucleic Acids Res 44(D1): D1229–D1236</em>).</li>
+        <li><a href="#">GLAD</a> (Glycan Array Dashboard) — a web-based visualization tool for glycan microarray data. (<em>Reference: Mehta YA & Cummings RD (2019) Bioinformatics, 35(18): 3536–3537</em>).</li>
+        <li><a href="#">GlycoGlyph</a> — a web app for drawing and exporting glycan structures as SVG or GlycoCT. (<em>Reference: Mehta YA & Cummings RD (2020) Bioinformatics, 36(11): 3613–3614</em>).</li>
+        <li><a href="#">ChemSpider</a> — a chemical database with 100M+ structures from the Royal Society of Chemistry.</li>
+        <li><a href="#">Chem-Space</a> — uses Marvin JS for chemical drawing and database search (1.8B chemicals).</li>
+      </ul>
+    </section>
+
+    <p class="updated"><strong>Updated:</strong> November, 2025</p>
+  </main>
+
+  <footer>
+    <p>© 2025 Internet Resources for Molecular Biologists</p>
+  </footer>
+
+<script>
+  const pages = [
+    { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
+    { name: "Carbohydrates", link: "carbohydrates.html" },
+    { name: "DNA Sequence Analysis", link: "#" },
+    { name: "Genomics", link: "genomics.html" },
+    { name: "Metabolomics", link: "#" },
+    { name: "Protein Sequence Analysis", link: "#" },
+    { name: "RNA Sequence Analysis", link: "#" },
+    { name: "Transcription Analysis", link: "#" },
+    { name: "Miscellaneous", link: "#" },
+    { name: "Software", link: "#" },
+    { name: "GenBank", link: "#" }
+  ];
+
+  const searchBar = document.getElementById("search-bar");
+  const resultsDiv = document.getElementById("search-results");
+
+  searchBar.addEventListener("input", searchSite);
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-container")) {
+      resultsDiv.innerHTML = "";
+    }
+  });
+
+  function searchSite() {
+    const input = searchBar.value.toLowerCase().trim();
+    resultsDiv.innerHTML = "";
+    if (input.length === 0) return;
+
+    const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
+    if (filtered.length > 0) {
+      filtered.forEach(page => {
+        const link = document.createElement("a");
+        link.href = page.link;
+        link.textContent = page.name;
+        resultsDiv.appendChild(link);
+      });
+    } else {
+      resultsDiv.innerHTML = "<p>No matches found.</p>";
+    }
+  }
+</script>
+
+</body>
+</html>

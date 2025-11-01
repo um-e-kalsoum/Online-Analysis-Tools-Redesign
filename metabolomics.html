@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metabolomics - Resource Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">Resource Hub</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="index.html#categories">Categories</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </header>
+
+  <div class="breadcrumbs">
+    <a href="index.html">Home</a> › 
+    <a href="index.html#categories">Categories</a> › 
+    <span>Metabolomics</span>
+  </div>
+
+  <main class="content">
+    <h1>Metabolomics</h1>
+
+    <p>
+      A good place to start would be the 
+      <a href="https://google.com" target="_blank">Metabolomics Innovation Centre</a> 
+      at the University of Alberta and their list of software.
+    </p>
+
+    <section class="tutorial-section">
+      <ul>
+        <li><a href="https://google.com" target="_blank">Biological Magnetic Resonance Data Bank Metabolomics</a> — a repository for data from NMR spectroscopy on proteins, peptides, nucleic acids, and other biomolecules.</li>
+        <li><a href="https://google.com" target="_blank">COLMAR</a> (Complex Mixture Analysis by NMR, OSU) — includes tools for deconvoluting and querying 1D and 2D NMR spectra from complex mixtures.</li>
+        <li><a href="https://google.com" target="_blank">ECMDB</a> (<em>E. coli</em> Metabolome Database) — a curated resource containing data and metabolic pathway diagrams for <em>Escherichia coli</em>. Contains 19,294 NMR and MS spectra and over 3,000 metabolites. (<em>Reference: T. Sajed et al. (2016) Nucleic Acids Res, 44(D1): D495–501</em>).</li>
+        <li><a href="https://google.com" target="_blank">Metabolomics GWAS Server</a> — provides genome-wide association study data on the human metabolome, with ongoing feature updates.</li>
+        <li><a href="https://google.com" target="_blank">M<sup>2</sup>IA</a> — a web server for Microbiome and Metabolome data integration and analysis, supporting statistical and multivariate modeling workflows.</li>
+        <li><a href="https://google.com" target="_blank">MetaboAnalyst</a> — a web server for comprehensive metabolomic data analysis, visualization, and interpretation. (<em>Reference: J. Xia et al. (2015) Nucleic Acids Res, 43(W1): W251–W257</em>).</li>
+        <li><a href="https://google.com" target="_blank">Workflow4Metabolomics</a> — an open-source platform for computational metabolomics based on the Galaxy framework. (<em>Reference: Giacomoni F. et al. (2015) Bioinformatics, 31:1493–1495</em>).</li>
+      </ul>
+    </section>
+
+    <p class="updated"><strong>Updated:</strong> August, 2025</p>
+  </main>
+
+  <footer>
+    <p>© 2025 Internet Resources for Molecular Biologists</p>
+  </footer>
+
+<script>
+  const pages = [
+    { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
+    { name: "Carbohydrates", link: "carbohydrates.html" },
+    { name: "Metabolomics", link: "metabolomics.html" },
+    { name: "Genomics", link: "genomics.html" },
+    { name: "DNA Sequence Analysis", link: "https://google.com" },
+    { name: "Protein Sequence Analysis", link: "https://google.com" },
+    { name: "RNA Sequence Analysis", link: "https://google.com" },
+    { name: "Transcription Analysis", link: "https://google.com" },
+    { name: "Miscellaneous", link: "https://google.com" },
+    { name: "Software", link: "https://google.com" },
+    { name: "GenBank", link: "https://google.com" }
+  ];
+
+  const searchBar = document.getElementById("search-bar");
+  const resultsDiv = document.getElementById("search-results");
+
+  searchBar.addEventListener("input", searchSite);
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-container")) {
+      resultsDiv.innerHTML = "";
+    }
+  });
+
+  function searchSite() {
+    const input = searchBar.value.toLowerCase().trim();
+    resultsDiv.innerHTML = "";
+    if (input.length === 0) return;
+
+    const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
+    if (filtered.length > 0) {
+      filtered.forEach(page => {
+        const link = document.createElement("a");
+        link.href = page.link;
+        link.textContent = page.name;
+        link.target = "_self";
+        resultsDiv.appendChild(link);
+      });
+    } else {
+      resultsDiv.innerHTML = "<p>No matches found.</p>";
+    }
+  }
+</script>
+
+</body>
+</html>
