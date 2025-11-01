@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bioinformatics Tutorials - Resource Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">Resource Hub</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="index.html#categories">Categories</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="search-container">
+    <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  </header>
+
+  <div class="breadcrumbs">
+  <a href="index.html">Home</a> › 
+  <a href="index.html#categories">Categories</a> › 
+  <span>Bioinformatic Tutorials</span>
+</div>
+
+  <main class="content">
+    <h1>Bioinformatics Tutorials</h1>
+
+    <section class="tutorial-section">
+      <h2>Suggested Resources</h2>
+      <ul>
+        <li><a href="https://google.com" target="_blank">Online Lectures on Bioinformatics</a> <em>(Martin Vingron, Computational Molecular Biology, Max Planck Institute for Molecular Genetics, Berlin, Germany)</em></li>
+        <li><a href="https://google.com" target="_blank">Virtual Mass Spectrometry Laboratory</a> <em>(Carnegie Mellon University, University of Pittsburgh, National Science Foundation)</em> — an interactive educational tool site with tutorials and case studies.</li>
+        <li>BLAST Resources — including <a href="https://google.com" target="_blank">Digital World Biology</a>, <a href="https://google.com" target="_blank">John Hopkins</a>, or NCBI BLAST/PSI-BLAST tutorials.</li>
+      </ul>
+    </section>
+
+    <section class="tutorial-section">
+      <h2>Equipment Simulations</h2>
+      <ul> 
+      <li><a href="https://google.com" target="_blank">View Simulations</a></li>
+      </ul>
+    </section>
+
+    <section class="tutorial-section">
+      <h2>Glossary</h2>
+      <ul>
+        <li><a href="https://google.com" target="_blank">BIOL419/519</a> or <a href="https://google.com" target="_blank">Talking Glossary of Genetic Terms</a></li>
+      </ul>
+    </section>
+
+    <p class="updated"><strong>Updated:</strong> October, 2025</p>
+  </main>
+
+  <footer>
+    <p>© 2025 Internet Resources for Molecular Biologists</p>
+  </footer>
+
+<script>
+  const pages = [
+    { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
+    { name: "Carbohydrates", link: "#" },
+    { name: "DNA Sequence Analysis", link: "#" },
+    { name: "Genomics", link: "genomics.html" },
+    { name: "Metabolomics", link: "#" },
+    { name: "Protein Sequence Analysis", link: "#" },
+    { name: "RNA Sequence Analysis", link: "#" },
+    { name: "Transcription Analysis", link: "#" },
+    { name: "Miscellaneous", link: "#" },
+    { name: "Software", link: "#" },
+    { name: "GenBank", link: "#" }
+  ];
+
+  const searchBar = document.getElementById("search-bar");
+  const resultsDiv = document.getElementById("search-results");
+
+  //only show results when typing
+  searchBar.addEventListener("input", searchSite);
+
+  //hide dropdown when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-container")) {
+      resultsDiv.innerHTML = "";
+    }
+  });
+
+  function searchSite() {
+    const input = searchBar.value.toLowerCase().trim();
+    resultsDiv.innerHTML = "";
+
+    if (input.length === 0) return; //do nothing when empty
+
+    const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
+
+    if (filtered.length > 0) {
+      filtered.forEach(page => {
+        const link = document.createElement("a");
+        link.href = page.link;
+        link.textContent = page.name;
+        link.target = "_self";
+        resultsDiv.appendChild(link);
+      });
+    } else {
+      resultsDiv.innerHTML = "<p>No matches found.</p>";
+    }
+  }
+</script>
+
+</body>
+</html>

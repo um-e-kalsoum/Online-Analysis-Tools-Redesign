@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internet Resources for Molecular Biologists</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Resource Hub</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="search-container">
+    <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
+    <div id="search-results" class="search-results"></div>
+  </div>
+  </header>
+
+  <section class="hero">
+    <div class="text">
+      <h1>Internet Resources for Molecular Biologists</h1>
+    <p>
+        Lorem ipsum dolor sit amet. Aut rerum voluptas et 
+        similique nihil et deserunt culpa eum distinctio amet.
+    </p>    
+    </div>
+    <div class="molecule-banner">
+  <img src="https://molbiol-tools.ca/animated_antibody.GIF" alt="Animated antibody">
+  <img src="https://molbiol-tools.ca/dna_logo.gif" alt="DNA logo">
+  <img src="https://molbiol-tools.ca/carboxy_peptidase_a3.gif" alt="Carboxy peptidase A3">
+</div>
+  </section>
+
+  <section class="about">
+    <h2>About</h2>
+    <p>
+    Lorem ipsum dolor sit amet. Aut rerum voluptas et similique 
+    nihil et deserunt culpa eum distinctio amet. Aut rerum nobis 
+    sed debitis asperiores et fuga repudiandae sit odit quae. Et 
+    molestiae tempore in incidunt dolore sed voluptate facilis qui 
+    necessitatibus deserunt et mollitia dolores non enim soluta!
+    </p>  
+</section>
+
+
+  <section id="categories" class="categories">
+  <h2>Categories</h2>
+  <div class="pill-container">
+      <a href="bioinformatics.html" class="pill">Bioinformatic Tutorials</a>
+      <a href="#" class="pill">Carbohydrates</a>
+      <a href="#" class="pill">DNA Sequence Analysis</a>
+      <a href="genomics.html" class="pill">Genomics</a>
+      <a href="#" class="pill">Metabolomics</a>
+      <a href="#" class="pill">Protein Sequence Analysis</a>
+      <a href="#" class="pill">RNA Sequence Analysis</a>
+      <a href="#" class="pill">Transcription Analysis</a>
+      <a href="#" class="pill">Miscellaneous</a>
+      <a href="#" class="pill">Software</a>
+      <a href="#" class="pill">GenBank</a>
+
+  </div>
+</section>
+
+
+  <footer>
+    <p>© 2025 Internet Resources for Molecular Biologists</p>
+  </footer>
+
+<script>
+  const pages = [
+    { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
+    { name: "Carbohydrates", link: "#" },
+    { name: "DNA Sequence Analysis", link: "#" },
+    { name: "Genomics", link: "genomics.html" },
+    { name: "Metabolomics", link: "#" },
+    { name: "Protein Sequence Analysis", link: "#" },
+    { name: "RNA Sequence Analysis", link: "#" },
+    { name: "Transcription Analysis", link: "#" },
+    { name: "Miscellaneous", link: "#" },
+    { name: "Software", link: "#" },
+    { name: "GenBank", link: "#" }
+  ];
+
+  const searchBar = document.getElementById("search-bar");
+  const resultsDiv = document.getElementById("search-results");
+
+  //only show results when typing
+  searchBar.addEventListener("input", searchSite);
+
+  //hide dropdown when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-container")) {
+      resultsDiv.innerHTML = "";
+    }
+  });
+
+  function searchSite() {
+    const input = searchBar.value.toLowerCase().trim();
+    resultsDiv.innerHTML = "";
+
+    if (input.length === 0) return; //do nothing when empty
+
+    const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
+
+    if (filtered.length > 0) {
+      filtered.forEach(page => {
+        const link = document.createElement("a");
+        link.href = page.link;
+        link.textContent = page.name;
+        link.target = "_self";
+        resultsDiv.appendChild(link);
+      });
+    } else {
+      resultsDiv.innerHTML = "<p>No matches found.</p>";
+    }
+  }
+</script>
+
+</body>
+</html>
