@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Software - Resource Hub</title>
+  <title>GenBank - Resource Hub</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,32 +25,55 @@
   <div class="breadcrumbs">
     <a href="index.html">Home</a> › 
     <a href="index.html#categories">Categories</a> › 
-    <span>Software</span>
+    <span>GenBank</span>
   </div>
 
   <main class="content">
-    <h1>Molecular Biology Freeware for Windows</h1>
+    <h1>Downloading Selected Sequences from GenBank</h1>
 
-    <p>
-      A good place to start is <a href="https://google.com" target="_blank">Genamics SoftwareSeek</a>.  
-      The following sites are arranged in the order that they were discovered.  
-      At some point they will be clustered by preference.
-    </p>
+    <section class="tutorial-section">
+      <h2>A. Whole Genomes</h2>
+      <p>This can be accomplished in several ways:</p>
 
-    <section class="categories">
-      <h2>Subcategories</h2>
-      <div class="pill-container">
-        <a href="#" class="pill">Microarray</a>
-        <a href="#" class="pill">DNA, RNA and Genomic Analysis</a>
-        <a href="#" class="pill">Plasmid Graphic Packages</a>
-        <a href="#" class="pill">Primer Design</a>
-        <a href="#" class="pill">Protein Analysis</a>
-        <a href="#" class="pill">Viewing Three Dimensional Structures</a>
-        <a href="#" class="pill">Alignments</a>
-        <a href="#" class="pill">Phylogeny</a>
-        <a href="#" class="pill">Miscellaneous</a>
-        <a href="#" class="pill">Graphic Packages</a>
-      </div>
+      <h3>1. Downloading a single file</h3>
+      <ol type="i">
+        <li>
+          On the <a href="https://google.com" target="_blank">NCBI home page</a> choose “Nucleotide” or “Genome” 
+          and paste in the accession number. Alternatively, type in the name and search. 
+          It is sometimes useful to use the 
+          <a href="https://google.com" target="_blank">Advanced Search Builder</a>.
+        </li>
+        <li>
+          Choose the item that you are interested in and its format “FASTA” or “GenBank” and click on it.
+        </li>
+        <li>
+          There are two main ways of downloading the data:
+          <ul>
+            <li>(a) “Copy” and “Paste” into Notepad or a text editor and save in the appropriate file format; or,</li>
+            <li>(b) Choose “send to:” → “Choose Destination” → “File” and select either GenBank (full) or FASTA from the format list.</li>
+          </ul>
+          Click “Create File” to download <code>sequence.gb</code> and <code>sequence.fasta</code> files.  
+          <em>Note:</em> The same process applies for FASTA documents in NCBI.
+        </li>
+      </ol>
+
+      <h3>2. Downloading multiple files</h3>
+      <ol type="i">
+        <li>
+          On the <a href="https://google.com" target="_blank">NCBI home page</a> choose “Nucleotide” or “Genome” 
+          and paste in the required accession numbers (limit 100). Alternatively, typing in the name and search.  
+          Again, the <a href="https://google.com" target="_blank">Advanced Search Builder</a> can be useful.
+        </li>
+        <li>You can use the “send to:” command as in <strong>A.1.ii.</strong> to save all the sequences.</li>
+        <li>Alternatively, click on the boxes next to desired records to download a selected subset of data.</li>
+      </ol>
+    </section>
+
+    <section class="tutorial-section">
+      <h2>B. Selected Proteins</h2>
+      <p>
+        ...to be added...
+      </p>
     </section>
 
     <p class="updated"><strong>Updated:</strong> October, 2025</p>
@@ -72,7 +95,7 @@
     { name: "Transcription Analysis", link: "transcription-analysis.html" },
     { name: "Miscellaneous", link: "miscellaneous.html" },
     { name: "Software", link: "software.html" },
-    { name: "GenBank", link: "#" }
+    { name: "GenBank", link: "genbank.html" }
   ];
 
   const searchBar = document.getElementById("search-bar");

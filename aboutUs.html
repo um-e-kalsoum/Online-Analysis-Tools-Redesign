@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Software - Resource Hub</title>
+  <title>About Us - Resource Hub</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,34 +24,55 @@
 
   <div class="breadcrumbs">
     <a href="index.html">Home</a> › 
-    <a href="index.html#categories">Categories</a> › 
-    <span>Software</span>
+    <span>About Us</span>
   </div>
 
   <main class="content">
-    <h1>Molecular Biology Freeware for Windows</h1>
+    <h1>About Us</h1>
 
-    <p>
-      A good place to start is <a href="https://google.com" target="_blank">Genamics SoftwareSeek</a>.  
-      The following sites are arranged in the order that they were discovered.  
-      At some point they will be clustered by preference.
-    </p>
+    <section class="about-section">
+      <div class="about-photo">
+        <!-- Placeholder for Andrew's photo -->
+        <div class="photo-placeholder">
+          <p>[ Photo ]</p>
+        </div>
+      </div>
 
-    <section class="categories">
-      <h2>Subcategories</h2>
-      <div class="pill-container">
-        <a href="#" class="pill">Microarray</a>
-        <a href="#" class="pill">DNA, RNA and Genomic Analysis</a>
-        <a href="#" class="pill">Plasmid Graphic Packages</a>
-        <a href="#" class="pill">Primer Design</a>
-        <a href="#" class="pill">Protein Analysis</a>
-        <a href="#" class="pill">Viewing Three Dimensional Structures</a>
-        <a href="#" class="pill">Alignments</a>
-        <a href="#" class="pill">Phylogeny</a>
-        <a href="#" class="pill">Miscellaneous</a>
-        <a href="#" class="pill">Graphic Packages</a>
+      <div class="about-text">
+        <h2>Meet Andrew</h2>
+        <p>
+          Andrew has spent his career exploring the intersection of molecular biology, 
+          Lorem ipsum dolor sit amet, consectetur 
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+        </p>
+
+        <p>
+          Over the years, Andrew has contributed to 
+          Lorem ipsum dolor sit amet, consectetur 
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+        </p>
+
+        <p>
+          Today, Andrew 
+          Lorem ipsum dolor sit amet, consectetur 
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+        </p>
       </div>
     </section>
+
+   <section class="contact-section">
+  <div class="contact-card">
+    <h2>Get in Touch</h2>
+    <p>
+      Have questions, feedback, or collaboration ideas?  
+      Andrew would love to hear from you. Feel free to reach out anytime:
+    </p>
+    <a href="mailto:andrew@example.com" class="contact-button">andrew@example.com</a>
+  </div>
+</section>
 
     <p class="updated"><strong>Updated:</strong> October, 2025</p>
   </main>
@@ -62,6 +83,8 @@
 
 <script>
   const pages = [
+    { name: "Home", link: "index.html" },
+    { name: "About Us", link: "about.html" },
     { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
     { name: "Carbohydrates", link: "carbohydrates.html" },
     { name: "DNA Sequence Analysis", link: "dna-sequencing.html" },
@@ -72,7 +95,7 @@
     { name: "Transcription Analysis", link: "transcription-analysis.html" },
     { name: "Miscellaneous", link: "miscellaneous.html" },
     { name: "Software", link: "software.html" },
-    { name: "GenBank", link: "#" }
+    { name: "GenBank", link: "genbank.html" }
   ];
 
   const searchBar = document.getElementById("search-bar");
@@ -107,6 +130,33 @@
     }
   }
 </script>
+
+<style>
+  .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .photo-placeholder {
+    width: 260px;
+    height: 260px;
+    border: 2px dashed #88a29e;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #88a29e;
+    background-color: rgba(255, 255, 255, 0.05);
+    font-style: italic;
+  }
+
+  .about-text {
+    flex: 1;
+    min-width: 280px;
+  }
+</style>
 
 </body>
 </html>
