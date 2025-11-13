@@ -30,36 +30,65 @@
   <main class="content">
     <h1>About Us</h1>
 
-    <section class="about-section">
-      <div class="about-photo">
-        <!-- Placeholder for Andrew's photo -->
-        <div class="photo-placeholder">
-          <p>[ Photo ]</p>
-        </div>
-      </div>
 
-      <div class="about-text">
-        <h2>Meet Andrew</h2>
+<section class="about-section">
+  <div class="about-photo-column">
+    <div class="about-photo">
+      <img src="Andrew.JPG" alt="Photo of Andrew Kropinski & Taksim">
+      <p class="photo-caption">Andrew Kropinski and Dog Taksim</p>
+    </div>
+    
+    <div class="achievements-box">
+      <h3>Recognitions & Achievements</h3>
+      <ul>
+        <li>Two teaching awards from Queen's University</li>
+        <li>Academician of the American Academy of Microbiology</li>
+        <li>Academician of the Georgian National Academy of Sciences</li>
+        <li>244 peer-reviewed manuscripts</li>
+        <li>30 book chapters</li>
+        <li>Five books published</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="about-text">
+            <h2>Meet Andrew</h2>
         <p>
-          Andrew has spent his career exploring the intersection of molecular biology, 
-          Lorem ipsum dolor sit amet, consectetur 
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+          Andrew Kropinski is a graduate of the Department of Microbiology & Immunology at the University of British
+           Columbia. He later joined the Department of Microbiology & Immunology at Queen’s University in Kingston, 
+           Ontario, where his research focused on the isolation and characterization of bacteriophages active against 
+           Pseudomonas aeruginosa. His work contributed to the development of cloning tools and facilitated the isolation
+            of lipopolysaccharide-defective mutants of this bacterium.
         </p>
 
         <p>
-          Over the years, Andrew has contributed to 
-          Lorem ipsum dolor sit amet, consectetur 
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+          A transformative experience at the Microbial Diversity summer course at the Marine Biological Laboratory 
+          (Woods Hole, MA) sparked a long-standing interest in spirochetes, leading to extensive research on the 
+          glycolipids of Spirochaeta aurantia.
         </p>
 
         <p>
-          Today, Andrew 
-          Lorem ipsum dolor sit amet, consectetur 
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+          During a sabbatical, Andrew transitioned from academia to a leadership role at the Public Health Agency 
+          of Canada (PHAC), where he spearheaded initiatives involving whole genome sequencing of foodborne pathogens.
         </p>
+
+          <p>
+          Since retiring from PHAC in 2014, he has served as an Adjunct Professor in the Department of Pathobiology 
+          at the Ontario Veterinary College, University of Guelph. In this role, he continues to mentor graduate students
+           and postdoctoral fellows in phage biology, genomics and taxonomy.
+        </p>
+
+          <p>
+          Andrew has received two teaching awards from Queen’s University and has been honored as an academician by both
+           the American Academy of Microbiology and the Georgian National Academy of Sciences. His scholarly contributions
+            include 244 peer-reviewed manuscripts, 30 book chapters, and five books.
+        </p>
+
+        <p>
+          Passionate about science and mentorship, Andrew remains actively engaged in research. Outside the laboratory, he
+           enjoys cooking, fine dining, theatre, baroque music, and travel. 
+        </p>
+
       </div>
     </section>
 
@@ -68,9 +97,8 @@
     <h2>Get in Touch</h2>
     <p>
       Have questions, feedback, or collaboration ideas?  
-      Andrew would love to hear from you. Feel free to reach out anytime:
+      Andrew would love to hear from you. Reach out anytime: <strong> phage.canada (at) gmail.com</strong>
     </p>
-    <a href="mailto:andrew@example.com" class="contact-button">andrew@example.com</a>
   </div>
 </section>
 
@@ -135,26 +163,151 @@
   .about-section {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 40px;
     align-items: flex-start;
+    margin: 40px 0;
   }
 
-  .photo-placeholder {
-    width: 260px;
-    height: 260px;
-    border: 2px dashed #88a29e;
-    border-radius: 8px;
+  .about-photo-column {
+    flex: 0 0 auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #88a29e;
-    background-color: rgba(255, 255, 255, 0.05);
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .about-photo {
+    flex: 0 0 auto;
+    margin-left: 20px;
+  }
+
+  .about-photo img {
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(202, 210, 197, 0.3);
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .about-photo img:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  }
+
+  .photo-caption {
+    margin-top: 12px;
+    color: #cad2c5;
+    font-size: 0.9rem;
     font-style: italic;
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  .achievements-box {
+    width: 320px;
+    max-width: 100%;
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(202, 210, 197, 0.1) 0%, rgba(136, 162, 158, 0.1) 100%);
+    border: 2px solid rgba(202, 210, 197, 0.3);
+    border-left: 4px solid #88a29e;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .achievements-box:hover {
+    background: linear-gradient(135deg, rgba(202, 210, 197, 0.15) 0%, rgba(136, 162, 158, 0.15) 100%);
+    border-color: rgba(202, 210, 197, 0.4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+  }
+
+  .achievements-box h3 {
+    color: #f6f6f4;
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    font-weight: 600;
+    margin-top: 0;
+  }
+
+  .achievements-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .achievements-box li {
+    color: #e6e6e4;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding: 8px 0;
+    padding-left: 22px;
+    position: relative;
+  }
+
+  .achievements-box li::before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    color: #88a29e;
+    font-size: 1rem;
   }
 
   .about-text {
     flex: 1;
-    min-width: 280px;
+    min-width: 300px;
+    text-align: left;
+  }
+
+  .about-text h2 {
+    color: #f6f6f4;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    margin-top: 0;
+  }
+
+  .about-text p {
+    color: #e6e6e4;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  /* Responsive: Stack on smaller screens */
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .about-photo-column {
+      width: 100%;
+      align-items: center;
+    }
+
+    .about-photo {
+      width: 100%;
+      text-align: center;
+      margin-left: 0;
+    }
+
+    .about-photo img {
+      width: 280px;
+      margin: 0 auto;
+    }
+
+    .achievements-box {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .about-text {
+      width: 100%;
+    }
   }
 </style>
 

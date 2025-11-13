@@ -363,9 +363,10 @@ footer {
 }
 
 .contact-card h2 {
-  color: #bde3d3;
+  color: #f6f6f4;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .contact-card p {
@@ -388,3 +389,6 @@ footer {
 .contact-button:hover {
   background-color: #a7c5b9;
 }
+
+
+
