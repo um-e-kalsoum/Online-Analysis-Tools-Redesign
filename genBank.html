@@ -6,6 +6,7 @@
   <title>GenBank - Resource Hub</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
     <div class="logo"><a href="index.html">Resource Hub</a></div>
@@ -16,6 +17,7 @@
         <li><a href="aboutUs.html">About Us</a></li>
       </ul>
     </nav>
+
     <div class="search-container">
       <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
       <div id="search-results" class="search-results"></div>
@@ -23,14 +25,15 @@
   </header>
 
   <div class="breadcrumbs">
-    <a href="index.html">Home</a> › 
-    <a href="index.html#categories">Categories</a> › 
+    <a href="index.html">Home</a> ›
+    <a href="index.html#categories">Categories</a> ›
     <span>GenBank</span>
   </div>
 
   <main class="content">
     <h1>Downloading Selected Sequences from GenBank</h1>
 
+    <!-- A. WHOLE GENOMES -->
     <section class="tutorial-section">
       <h2>A. Whole Genomes</h2>
       <p>This can be accomplished in several ways:</p>
@@ -38,98 +41,244 @@
       <h3>1. Downloading a single file</h3>
       <ol type="i">
         <li>
-          On the <a href="https://google.com" target="_blank">NCBI home page</a> choose “Nucleotide” or “Genome” 
-          and paste in the accession number. Alternatively, type in the name and search. 
-          It is sometimes useful to use the 
-          <a href="https://google.com" target="_blank">Advanced Search Builder</a>.
+          On the <a href="https://www.ncbi.nlm.nih.gov/" target="_blank">NCBI home page</a> choose “Nucleotide” or “Genome”
+          and paste in the accession number. Alternatively, type in the name and search.
+          It is sometimes useful to use the
+          <a href="https://www.ncbi.nlm.nih.gov/nuccore/advanced" target="_blank">Advanced Search Builder</a>.
         </li>
+
         <li>
           Choose the item that you are interested in and its format “FASTA” or “GenBank” and click on it.
         </li>
+
         <li>
           There are two main ways of downloading the data:
           <ul>
             <li>(a) “Copy” and “Paste” into Notepad or a text editor and save in the appropriate file format; or,</li>
-            <li>(b) Choose “send to:” → “Choose Destination” → “File” and select either GenBank (full) or FASTA from the format list.</li>
+            <li>(b) Choose “send to:” → “Choose Destination” → “File” and select either GenBank (full) or FASTA from the "Format" list.</li>
           </ul>
-          Click “Create File” to download <code>sequence.gb</code> and <code>sequence.fasta</code> files.  
-          <em>Note:</em> The same process applies for FASTA documents in NCBI.
+
+          Click “Create File” to download <code>sequence.gb</code> and <code>sequence.fasta</code> files, respectively.
+          <p><em>N.B.</em> The same can be done from the FASTA document in NCBI</p>
         </li>
       </ol>
 
       <h3>2. Downloading multiple files</h3>
       <ol type="i">
         <li>
-          On the <a href="https://google.com" target="_blank">NCBI home page</a> choose “Nucleotide” or “Genome” 
-          and paste in the required accession numbers (limit 100). Alternatively, typing in the name and search.  
-          Again, the <a href="https://google.com" target="_blank">Advanced Search Builder</a> can be useful.
+          On the <a href="https://www.ncbi.nlm.nih.gov/" target="_blank">NCBI home page</a> choose “Nucleotide” or “Genome”
+          and paste in the required accession numbers (limit 100). Alternatively, typing in the name and search.
+          Again, the <a href="https://www.ncbi.nlm.nih.gov/nuccore/advanced" target="_blank">Advanced Search Builder</a> can be useful.
         </li>
+
         <li>You can use the “send to:” command as in <strong>A.1.ii.</strong> to save all the sequences.</li>
-        <li>Alternatively, click on the boxes next to desired records to download a selected subset of data.</li>
+
+        <li>Alternatively, you can click on the boxes associated with the desired records to download a selected subset of data.</li>
       </ol>
     </section>
 
+    <!-- B. SELECTED PROTEINS -->
     <section class="tutorial-section">
       <h2>B. Selected Proteins</h2>
-      <p>
-        ...to be added...
-      </p>
+
+      <ol type="i">
+        <li>
+          You can approach the selection of a specific protein for downloading in much the same manner as described
+          for a GenBank flatfile (*.gbk) or fasta-formated nucleotide in the way described for genomes and nucleotides
+          as described above. Alternative, you can go to the Protein database and make your selection.
+        </li>
+
+        <li>
+          You may want to download the results of a BLASTp search for subsequent phylogenetic analysis. This can be
+          accomplished within the BLASTp search results by choosing “Select All” or selecting the boxes for the sequences
+          you are interested in.
+        </li>
+
+        <li>
+          Select “Download” → choose “FASTA (complete sequence)” → click “Continue.”
+          The downloaded file will be called <code>seqdump.txt</code>.
+        </li>
+
+        <li>Open the file in Notepad or another text editor.</li>
+
+        <li>
+          The data may look like the following:
+          <pre>
+(a) single record:
+>ANJ65251.1 putative RNA polymerase 1 [Erwinia phage vB_EamP_Rexella]
+MDQLTEHQTRLEELFSNNQLMPRMRKEFTECESFDFTKYLEHKAIDVKFGIDLLVQMALHKRCDLQTL VGTLRHHCESAQEVVNNILKCAEADLVDYNVSLGIFIVRCTISNDV
+QEELDRFQYPLPMVVEPKKITNNKQSGYLLNNKSIILKDNHHEDDVCLDHINRLNKIKFRINFDTARMV KNEWRNLDKRKEGETQADFMKRKKAFEKYDSTARDVMEVLHKVS
+DTFHLTHSYDKRLRTYAQGYHVNYQGTAWNKAVIEFAEEEVTNG
+
+(b) Multi-hit record:
+>YP_009286151.1 putative RNA polymerase 1 [Erwinia phage vB_EamP_Frozen]
+>ANJ65154.1 putative RNA polymerase 1 [Erwinia phage vB_EamP_Frozen]
+>ANJ65337.1 putative RNA polymerase 1 [Erwinia phage vB_EamP_Gutmeister]
+MDQLTEHQTRLEELFSNNQLMPRMRKEFTECESFDFTKYLEHKAIDVKFGIDLLVQMALHKRCDLQTL VGTLRHHCESAQEVVNNILKCAEADLVDYNVSLGIFIVRCTISNDV
+QEELDRFQYPLPMVVEPKKITNNKQSGYLLNNKSIILKDNHHEDDVCLDHINRLNKIKFRINFDTARMV KNEWRNLDKRKEGETQADFIKRKKAFEKYDSTARDVMEVLHKVSD
+DTFHLTHSYDKRLRTYAQGYHVNYQGTAWNKAVIEFAEEEVTNG
+          </pre>
+        </li>
+
+        <li>
+          Use your text editor to duplicate the latter record and remove nonessential test so that you end up with
+          a poly-fasta document in the following format:
+          <pre>
+> ANJ65251
+MDQLTEHQTRLEELFSNNQLMPRMRKEFTECESFDFTKYLEHKAIDV etc
+
+> ANJ65154
+MDQLTEHQTRLEELFSNNQLMPRMRKEFTECESFDFTKYLEHKAIDV etc
+
+> ANJ65337
+MDQLTEHQTRLEELFSNNQLMPRMRKEFTECESFDFTKYLEHKAIDV etc
+          </pre>
+
+          OR
+
+          <pre>
+> Erwinia phage vB_EamP_Rexella
+MDQLTEHQTRLEELFSNNQLMPRMRKEFTECESFDFTKYLEHKAIDV etc
+
+> Erwinia phage vB_EamP_Frozen
+MDQLTEHQTRLEELFSNNQLMPRMRKEFTECESFDFTKYLEHKAIDV etc
+
+> Erwinia phage vB_EamP_Gutmeister
+MDQLTEHQTRLEELFSNNQLMPRMRKEFTECESFDFTKYLEHKAIDV etc
+          </pre>
+        </li>
+      </ol>
     </section>
 
-    <p class="updated"><strong>Updated:</strong> October, 2025</p>
+    <!-- C. BIOEDIT -->
+    <section class="tutorial-section">
+      <h2>C. Using BioEdit to Edit File Formats</h2>
+
+      <ol type="i">
+        <li>Run <a href="http://www.google.com" target="_blank">BioEdit</a> and open <code>sequence.gb</code>.</li>
+
+        <li>
+          The GenBank <strong>DEFINITION</strong> line will appear in the left column, and the associated sequence appears
+          in the right column.
+        </li>
+
+        <li>
+          You can change this to give the ACCESSION number by choosing “Edit” → “Select all sequences” →
+          under “Sequence” select “rename” → “with ACCESSION.”
+          <p><em>N.B.</em> if you get >one accession number this may indicate that one of the sequences may have been replaced in GenBank.</p>
+        </li>
+
+        <li>In either of these cases place cursor in the left column and under “Edit” choose “Select All Sequences.”</li>
+
+        <li>
+          <strong>To Export to Excel:</strong><br>
+          Choose “Edit” → “Export” → “tab-delimited text” → save as *.tab.<br>
+          Then open the file in Excel → “Delimited” → “Next” → “Finish.”<br>
+          This will give Column A = names, Column B = sequences.
+        </li>
+
+        <li>
+          <strong>To Export as Individual Files:</strong><br>
+          Under “File” choose “Export” → “split into individual fasta files.”<br>
+          Save the files in a new folder.
+          <p><em>Warning:</em> Names may be too similar (example: Acinetobacter phage YMC11/12/R1215) files may not be generated.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- D. EMBOSS -->
+    <section class="tutorial-section">
+      <h2>D. Splitting Poly-Fasta Protein Files using EMBOSS Explorer seqretsplit</h2>
+
+      <ol type="i">
+        <li>
+          EMBOSS seqretsplit can be accessed
+          <a href="https://www.bioinformatics.nl/cgi-bin/emboss/seqretsplit" target="_blank">here</a> or
+          <a href="http://www.google.com" target="_blank">here</a>.
+        </li>
+
+        <li>
+          Upload your <code>seqdump.txt</code> or <code>sequence.fasta</code> file and leave
+          "Output sequence format" as default “Pearson FASTA”.
+        </li>
+
+        <li>
+          When the results come up in your Internet browser search for the fasta symbol (>) and right click to download
+          the separate files. These will be identified by their accession numbers.
+          Unfortunately, the latter are named ab123456.fasta and not AB123456.fasta.
+        </li>
+      </ol>
+    </section>
+
+    <!-- E. GENBANK FLATFILES -->
+    <section class="tutorial-section">
+      <h2>E. Extract Protein Sequences from GenBank Flatfiles</h2>
+
+      <ol type="i">
+        <li>
+          Use the Rocap
+          <a href="http://www.google.com" target="_blank">
+            Genbank/EMBL to FASTA Conversion Tool
+          </a>
+          to convert GenBank flat file (*.gbk) into fasta-formatted amino acid sequence file (*.faa).
+        </li>
+      </ol>
+    </section>
+
+    <p class="updated"><strong>Updated:</strong> November, 2025</p>
   </main>
 
   <footer>
     <p>© 2025 Internet Resources for Molecular Biologists</p>
   </footer>
 
-<script>
-  const pages = [
-    { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
-    { name: "Carbohydrates", link: "carbohydrates.html" },
-    { name: "DNA Sequence Analysis", link: "dna-sequencing.html" },
-    { name: "Genomics", link: "genomics.html" },
-    { name: "Metabolomics", link: "metabolomics.html" },
-    { name: "Protein Sequence Analysis", link: "protein-sequence.html" },
-    { name: "RNA Sequence Analysis", link: "rna-sequence.html" },
-    { name: "Transcription Analysis", link: "transcription-analysis.html" },
-    { name: "Miscellaneous", link: "miscellaneous.html" },
-    { name: "Software", link: "software.html" },
-    { name: "GenBank", link: "genbank.html" }
-  ];
+  <script>
+    const pages = [
+      { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
+      { name: "Carbohydrates", link: "carbohydrates.html" },
+      { name: "DNA Sequence Analysis", link: "dna-sequencing.html" },
+      { name: "Genomics", link: "genomics.html" },
+      { name: "Metabolomics", link: "metabolomics.html" },
+      { name: "Protein Sequence Analysis", link: "protein-sequence.html" },
+      { name: "RNA Sequence Analysis", link: "rna-sequence.html" },
+      { name: "Transcription Analysis", link: "transcription-analysis.html" },
+      { name: "Miscellaneous", link: "miscellaneous.html" },
+      { name: "Software", link: "software.html" },
+      { name: "GenBank", link: "genbank.html" }
+    ];
 
-  const searchBar = document.getElementById("search-bar");
-  const resultsDiv = document.getElementById("search-results");
+    const searchBar = document.getElementById("search-bar");
+    const resultsDiv = document.getElementById("search-results");
 
-  searchBar.addEventListener("input", searchSite);
+    searchBar.addEventListener("input", searchSite);
 
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".search-container")) {
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".search-container")) {
+        resultsDiv.innerHTML = "";
+      }
+    });
+
+    function searchSite() {
+      const input = searchBar.value.toLowerCase().trim();
       resultsDiv.innerHTML = "";
+
+      if (input.length === 0) return;
+
+      const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
+
+      if (filtered.length > 0) {
+        filtered.forEach(page => {
+          const link = document.createElement("a");
+          link.href = page.link;
+          link.textContent = page.name;
+          link.target = "_self";
+          resultsDiv.appendChild(link);
+        });
+      } else {
+        resultsDiv.innerHTML = "<p>No matches found.</p>";
+      }
     }
-  });
-
-  function searchSite() {
-    const input = searchBar.value.toLowerCase().trim();
-    resultsDiv.innerHTML = "";
-
-    if (input.length === 0) return;
-
-    const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
-
-    if (filtered.length > 0) {
-      filtered.forEach(page => {
-        const link = document.createElement("a");
-        link.href = page.link;
-        link.textContent = page.name;
-        link.target = "_self";
-        resultsDiv.appendChild(link);
-      });
-    } else {
-      resultsDiv.innerHTML = "<p>No matches found.</p>";
-    }
-  }
-</script>
+  </script>
 
 </body>
 </html>

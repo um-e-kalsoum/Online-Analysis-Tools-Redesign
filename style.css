@@ -113,14 +113,13 @@ nav ul li a:hover {
 }
 
 .molecule-banner img {
-  width: 180px;            
+  width: 180px;
   height: auto;
   border-radius: 6px;
   border: 2px solid #cad2c5;
-  background-color: #1e2a2a; 
+  background-color: #1e2a2a;
   padding: 5px;
 }
-
 
 /* ABOUT SECTION */
 .about {
@@ -135,8 +134,7 @@ nav ul li a:hover {
 .about h2 {
   color: #f6f6f4;
   font-size: 2rem;
-  margin-bottom: 20px;
-  margin-top: 0;
+  margin: 0 0 20px 0;
   text-align: center;
 }
 
@@ -150,6 +148,26 @@ nav ul li a:hover {
 
 .about p:last-child {
   margin-bottom: 0;
+}
+
+.about a,
+.about a:link {
+  color: #FFFF6E;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.3s ease;
+}
+
+.about a:visited {
+  color: #ffd000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.about a:hover {
+  color: #fee35c;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* CATEGORIES */
@@ -236,7 +254,7 @@ nav ul li a:hover {
 
 /* TUTORIAL SECTIONS */
 .tutorial-section h2 {
-  color: #dee0dc;
+  color: #f2f2f2;
   font-size: 1.5rem;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -260,21 +278,28 @@ a:visited {
 }
 
 a:hover {
-  color: #cad2c5;
+  color: #f6f6f4;
 }
 
-/* DIFFERENT COLOR FOR TUTORIAL LINKS */
+/* TUTORIAL SECTION LINKS */
 .tutorial-section a,
-.tutorial-section a:link,
+.tutorial-section a:link {
+  color: #FFFF6E;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
 .tutorial-section a:visited {
-  color: #adb6a8;
-  text-decoration: none;
+  color: #ffd000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   font-weight: 600;
 }
 
 .tutorial-section a:hover {
-  color: #cad2c5;
-  text-decoration: underline;
+  color: #fee35c;
 }
 
 /* UPDATED TEXT */
@@ -359,7 +384,6 @@ footer {
   font-size: 0.9rem;
 }
 
-
 .contact-section {
   margin-top: 4rem;
   display: flex;
@@ -411,5 +435,172 @@ footer {
   background-color: #a7c5b9;
 }
 
+/* ABOUT US PAGE STYLES */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  margin: 40px 0;
+}
 
+.about-photo-column {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
 
+.about-photo {
+  flex: 0 0 auto;
+  margin-left: 20px;
+}
+
+.about-photo img {
+  width: 320px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(202, 210, 197, 0.3);
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-photo img:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.photo-caption {
+  margin-top: 12px;
+  color: #e6e6e4;
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.achievements-box {
+  width: 320px;
+  max-width: 100%;
+  padding: 25px;
+  background: linear-gradient(135deg, rgba(202, 210, 197, 0.15) 0%, rgba(136, 162, 158, 0.15) 100%);
+  border: 2px solid rgba(202, 210, 197, 0.4);
+  border-left: 4px solid #88a29e;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.achievements-box:hover {
+  background: linear-gradient(135deg, rgba(202, 210, 197, 0.2) 0%, rgba(136, 162, 158, 0.2) 100%);
+  border-color: rgba(202, 210, 197, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.achievements-box h3 {
+  color: #f6f6f4;
+  font-size: 1.3rem;
+  margin: 0 0 18px 0;
+  font-weight: 600;
+}
+
+.achievements-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievements-box li {
+  color: #f6f6f4;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  padding: 8px 0;
+  padding-left: 22px;
+  position: relative;
+}
+
+.achievements-box li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  color: #a7c5b9;
+  font-size: 1rem;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.about-text h2 {
+  color: #f6f6f4;
+  font-size: 2rem;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
+.about-text p {
+  color: #f2f2f0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Responsive: About Us Page */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-photo-column {
+    width: 100%;
+    align-items: center;
+  }
+
+  .about-photo {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .about-photo img {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .achievements-box {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+}
+
+/* SEQUENCE BLOCK STYLES (for introInstructions.html) */
+.sequence-block {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(202, 210, 197, 0.3);
+  border-left: 3px solid #88a29e;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 15px 0 25px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: #e6e6e4;
+  line-height: 1.6;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.sequence-block:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(202, 210, 197, 0.4);
+}
