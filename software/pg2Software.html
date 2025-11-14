@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plasmid Graphics - Resource Hub</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="../index.html">Resource Hub</a></div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#categories">Categories</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </header>
+
+  <div class="breadcrumbs">
+    <a href="../index.html">Home</a> ›
+    <a href="../index.html#categories">Categories</a> ›
+    <a href="software.html">Software</a> ›
+    <span>Plasmid Graphics</span>
+  </div>
+
+  <main class="content">
+    <h1>Plasmid Graphics</h1>
+
+    <section class="tutorial-section">
+      <h2>Software Tools</h2>
+
+      <div class="software-item">
+        <div class="software-item-content">
+          <div class="software-image-placeholder">
+            <img src="pg2PicsSoftware/SnapGene.png" alt="SnapGene software">
+          </div>
+          <div class="software-text">
+            <h3>SnapGene Viewer</h3>
+            <p>
+              <a href="https://www.snapgene.com/snapgene-viewer/" target="_blank">SnapGene Viewer</a> - includes the same rich visualization, annotation, and sharing capabilities as the fully enabled SnapGene software. I am very impressed with this freeware which enabled me to produce this map from the gbk file.
+            </p>
+          </div>
+        </div>
+        <div class="software-full-width-image">
+          <img src="pg2PicsSoftware/SnapGene2.png" alt="SnapGene software">
+        </div>
+      </div>
+
+      <div class="software-item">
+        <div class="software-item-content">
+          <div class="software-image-placeholder">
+            <img src="pg2PicsSoftware/pLOT.jpg" alt="SnapGene software">
+          </div>
+          <div class="software-text">
+            <h3>pLOT</h3>
+            <p>
+<a href="http://www.plasmidplotter.com/" target="_blank">pLOT</a> - (Jean-Marc DeKeyser, Vanderbilt University, U.S.A.)            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="software-item">
+        <div class="software-item-content">
+          <div class="software-image-placeholder">
+            <img src="pg2PicsSoftware/ApE.gif" alt="SnapGene software">
+          </div>
+          <div class="software-text">
+            <h3>ApE Plasmid Editor</h3>
+            <p>
+<a href="https://jorgensen.biology.utah.edu/wayned/ape/" target="_blank">ApE Plasmid Editor</a> (M. Wayne Davis, Univ. Utah, U.S.A.) highlights and draws graphic maps using feature annotations from GenBank and EMBL files; creates graphic restriction maps - linear or circular with features indicated and allows BLAST analyses along with a number of other useful features. </p>
+<p><strong>(Reference:</strong> Davis MW &  Jorgensen EM. (2022) Front Bioinform. 2: 818619).            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="software-item">
+        <div class="software-item-content">
+          <div class="software-image-placeholder">
+            <img src="pg2PicsSoftware/pDRAW.gif" alt="SnapGene software">
+          </div>
+          <div class="software-text">
+            <h3>pDRAW</h3>
+            <p>
+<a href="https://www.acaclone.com/" target="_blank">pDRAW32</a> DNA analysis software by AcaClone software (Kjeld Olesen).  pDRAW lets you enter a DNA name and coordinates for genetic elements, such as genes, to be plotted on your DNA plots.             </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="software-item">
+        <div class="software-item-content">
+          <div class="software-image-placeholder">
+          </div>
+          <div class="software-text">
+            <h3>BVTech Plasmid</h3>
+            <p>
+<a href="https://bvtech-plasmid-1.soft112.com/" target="_blank">BVTech Plasmid</a> - with this program you can draw circular or linear plasmid map with double strands or single strand. You can label the plasmid with genes and restriction sites in different colors, text, and styles.             </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="software-item">
+        <div class="software-item-content">
+          <div class="software-image-placeholder">
+            <img src="pg2PicsSoftware/VectorBee.png" alt="SnapGene software">
+          </div>
+          <div class="software-text">
+            <h3>VectorBee</h3>
+            <p>
+<a href="https://www.vectorbee.com/en/" target="_blank">VectorBee</a> is a highly user-friendly genetic engineering software created by VectorBuilder for viewing, editing and analyzing DNA and protein sequences. It is developed by a talented team of biologists and IT engineers led by Professor Bruce Lahn. As the Chief Scientist of VectorBee (and also VectorBuilder)            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <p class="updated"><strong>Updated:</strong> November, 2025</p>
+  </main>
+
+  <footer>
+    <p>© 2025 Internet Resources for Molecular Biologists</p>
+  </footer>
+
+  <script>
+    const pages = [
+      { name: "Home", link: "../index.html" },
+      { name: "About Us", link: "../aboutUs.html" },
+      { name: "Bioinformatic Tutorials", link: "../bioinformatics.html" },
+      { name: "Carbohydrates", link: "../carbohydrates.html" },
+      { name: "DNA Sequence Analysis", link: "../dnaSequenceAnalysis.html" },
+      { name: "Genomics", link: "../genomics.html" },
+      { name: "Metabolomics", link: "../metabolomics.html" },
+      { name: "Protein Sequence Analysis", link: "../proteinSequenceAnalysis.html" },
+      { name: "RNA Sequence Analysis", link: "../rnaSequenceAnalysis.html" },
+      { name: "Transcription Analysis", link: "../transcriptionAnalysis.html" },
+      { name: "Miscellaneous", link: "../miscellaneous.html" },
+      { name: "Software", link: "software.html" },
+      { name: "GenBank", link: "../genBank.html" }
+    ];
+
+    const searchBar = document.getElementById("search-bar");
+    const resultsDiv = document.getElementById("search-results");
+
+    searchBar.addEventListener("input", searchSite);
+
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".search-container")) {
+        resultsDiv.innerHTML = "";
+      }
+    });
+
+    function searchSite() {
+      const input = searchBar.value.toLowerCase().trim();
+      resultsDiv.innerHTML = "";
+
+      if (input.length === 0) return;
+
+      const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
+
+      if (filtered.length > 0) {
+        filtered.forEach(page => {
+          const link = document.createElement("a");
+          link.href = page.link;
+          link.textContent = page.name;
+          link.target = "_self";
+          resultsDiv.appendChild(link);
+        });
+      } else {
+        resultsDiv.innerHTML = "<p>No matches found.</p>";
+      }
+    }
+  </script>
+
+</body>
+</html>
+

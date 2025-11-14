@@ -653,6 +653,23 @@ footer {
   justify-content: center;
 }
 
+.software-full-width-image {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.software-full-width-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: contain;
+  display: block;
+}
+
 .software-text {
   flex: 1;
 }
