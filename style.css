@@ -125,11 +125,31 @@ nav ul li a:hover {
 /* ABOUT SECTION */
 .about {
   max-width: 900px;
-  margin: auto;
-  padding: 80px 20px;
-  text-align: center;
+  margin: 60px auto;
+  padding: 40px 35px;
+  text-align: left;
   border-radius: 12px;
   border: 1px solid rgba(209, 193, 155, 0.3);
+}
+
+.about h2 {
+  color: #f6f6f4;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  margin-top: 0;
+  text-align: center;
+}
+
+.about p {
+  color: #e6e6e4;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.about p:last-child {
+  margin-bottom: 0;
 }
 
 /* CATEGORIES */
@@ -200,9 +220,9 @@ nav ul li a:hover {
   margin: 60px auto;
   padding: 20px;
   line-height: 1.7;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  border: 1px solid rgba(202, 210, 197, 0.3);
+  border: 1px solid rgba(202, 210, 197, 0.4);
 }
 
 .content h1 {
@@ -347,18 +367,19 @@ footer {
 }
 
 .contact-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid #88a29e;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(202, 210, 197, 0.4);
   border-radius: 10px;
   padding: 2rem;
   max-width: 600px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
 .contact-card:hover {
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(202, 210, 197, 0.5);
   transform: translateY(-3px);
 }
 
@@ -370,7 +391,7 @@ footer {
 }
 
 .contact-card p {
-  color: #e6f2ee;
+  color: #f2f2f0;
   margin-bottom: 1.2rem;
   line-height: 1.6;
 }

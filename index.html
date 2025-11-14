@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <div class="logo">Resource Hub</div>
+    <div class="logo"><a href="index.html">Resource Hub</a></div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -17,18 +17,15 @@
       </ul>
     </nav>
     <div class="search-container">
-    <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
-    <div id="search-results" class="search-results"></div>
-  </div>
+      <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
+      <div id="search-results" class="search-results"></div>
+    </div>
   </header>
 
   <section class="hero">
     <div class="text">
       <h1>Internet Resources for Molecular Biologists</h1>
-    <p>
-        Lorem ipsum dolor sit amet. Aut rerum voluptas et 
-        similique nihil et deserunt culpa eum distinctio amet.
-    </p>    
+    
     </div>
     <div class="molecule-banner">
   <img src="https://molbiol-tools.ca/animated_antibody.GIF" alt="Animated antibody">
@@ -40,22 +37,29 @@
   <section class="about">
     <h2>About</h2>
     <p>
-    Lorem ipsum dolor sit amet. Aut rerum voluptas et similique 
-    nihil et deserunt culpa eum distinctio amet. Aut rerum nobis 
-    sed debitis asperiores et fuga repudiandae sit odit quae. Et 
-    molestiae tempore in incidunt dolore sed voluptate facilis qui 
-    necessitatibus deserunt et mollitia dolores non enim soluta!
-    </p>  
-</p>
-</section>
+      My laboratory completed our first phage genome project at the end of the 1990s and while we had access to powerful 
+      software packages such as PC/GENE, Vector NTI, DNAMAN and DNASTAR's Lasergene these programs did not cover all our
+      bioinformatic needs. The burgeoning Internet supplied the missing resources. Initially "Pedro's BioMolecular Research
+      Tools - A Collection of WWW Links to Information and Services Useful to Molecular Biologists" proved a useful 
+      starting resource but the fact that the recommended sites were not clustered ultimately proved problematic.
+    </p>
+    <p>
+      Therefore, over 25 years ago, I started to develop Online Analysis Tools to provide my students with access to 
+      reliable Internet resources to aid their research. If you would like to try any of these free resources but lack 
+      experience, see <a href="introInstructions.html">Introductory Instructions</a>.
+    </p>
+    <p>
+      This is the first time that these webpages have been updated to render them World Wide Web Consortium (W3C) compatible.
+    </p>
+  </section>
 
 
   <section id="categories" class="categories">
   <h2>Categories</h2>
   <div class="pill-container">
-      <a href="bioinformatics.html" class="pill">Bioinformatic Tutorials</a>
       <a href="carbohydrates.html" class="pill">Carbohydrates</a>
       <a href="dnaSequenceAnalysis.html" class="pill">DNA Sequence Analysis</a>
+      <a href="Translations.html" class="pill">Translations</a>
       <a href="genomics.html" class="pill">Genomics</a>
       <a href="metabolomics.html" class="pill">Metabolomics</a>
       <a href="proteinSequenceAnalysis.html" class="pill">Protein Sequence Analysis</a>
@@ -75,17 +79,19 @@
 
 <script>
   const pages = [
+    { name: "Home", link: "index.html" },
+    { name: "About Us", link: "aboutUs.html" },
     { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
-    { name: "Carbohydrates", link: "#" },
-    { name: "DNA Sequence Analysis", link: "#" },
+    { name: "Carbohydrates", link: "carbohydrates.html" },
+    { name: "DNA Sequence Analysis", link: "dna-sequencing.html" },
     { name: "Genomics", link: "genomics.html" },
-    { name: "Metabolomics", link: "#" },
-    { name: "Protein Sequence Analysis", link: "#" },
-    { name: "RNA Sequence Analysis", link: "#" },
-    { name: "Transcription Analysis", link: "#" },
-    { name: "Miscellaneous", link: "#" },
-    { name: "Software", link: "#" },
-    { name: "GenBank", link: "#" }
+    { name: "Metabolomics", link: "metabolomics.html" },
+    { name: "Protein Sequence Analysis", link: "protein-sequence.html" },
+    { name: "RNA Sequence Analysis", link: "rna-sequence.html" },
+    { name: "Transcription Analysis", link: "transcription-analysis.html" },
+    { name: "Miscellaneous", link: "miscellaneous.html" },
+    { name: "Software", link: "software.html" },
+    { name: "GenBank", link: "genbank.html" }
   ];
 
   const searchBar = document.getElementById("search-bar");

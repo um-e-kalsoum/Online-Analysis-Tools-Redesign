@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introductory Instructions - Resource Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html">Resource Hub</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#categories">Categories</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </header>
+
+  <div class="breadcrumbs">
+    <a href="index.html">Home</a> › 
+    <span>Introductory Instructions</span>
+  </div>
+
+  <main class="content">
+    <h1>Introductory Instructions</h1>
+
+  <p>
+    For those with no experience I have provided four sequences: (a) a DNA sequence, (b) a protein sequence, 
+    (c) a RNA sequence and (d) four protein sequences all in FASTA format. Prior to trying out a Web Site select
+     the sequence and the FASTA line and copy to clipboard.  Each of these Sites recommended in Online Analysis 
+     Tools will have a box into which you can "Paste" your sequence. Then click on the button labeled "Search," 
+     "Run" or "Submit." If in doubt use the default setting that the sites provide, but for the more adventuresome,
+      some of the sites offer the chance of modifying the search strategy.
+  </p>
+
+  <p>
+    (a) DNA sequence
+  </p>
+  <pre class="sequence-block">>DNA sequence TCTTGAAATCCATTTTTAGCCCAACCAGATCATCCCGCGCGAAGTGCTCGAACGAGGCTTCGCACCCGTCCGGATTGGTCATCCGGTCCGGGATGGGGAACAAGATCATCAATGTTTGTCCATGGAGGAAAACATGGCGTTTCGACCGCTTCATGATCGTATTCTCGTCCGCCGCGTCGAGTCCGAAGAGAAGACCAAAGGCGGCATCATCATCCCCGACACTGCCAAGGAGAAGCCCCAGGAAGGCGAAGTCCTCGCTGTAGGTCCCGGCGCGCGCGGCGAACAGGGTCAGATCCAGCCGCTCGACGTCAAGGTGGGCGACCGCATCCTGTTCGGCAAGTGGTCCGGCACCGAGTCAAGATCGACGGAGAAGATCTCCTGATCATGAAGGAAAGCGATGTCATGGGAATCATCGAGGCCCGGGCGCCGAGAAGATAGCCGCCTGATAACGCGAAGATACAGTCAACAAGCTGCCTATC</pre>
+
+  <p>
+    (b) Protein sequence
+  </p>
+  <pre class="sequence-block">>Protein sequence
+MAQLSLQHIQKIYDNQVHVVKDFNLEIADKEFIVFVAASGCGKSTTLRMIAGLEEISGGDLLIDGKRMNDVPAKARNIAMVFQNYALYPHMTVYDNMAFGLKMQKIAKEVIDERVNWAAQILGLREYLKRKPGALSGGQRQRVALGRAIVREAGVFLMDEPLSNLDAKLRVQMRAEISKLHQKLNTTMIYVTHDQTEAMTMATRIVIMKDGIVQQVGAPKTVYNQPANMFVSGFIGSPAMNFIRGTIDGDKFVTETLKLTIPEEKLAVLKTQESLHKPIVMGIRPEDIHPDAQEENNISAKISVAELTGAEFMLYTTVGGTS</pre>
+
+  <p>
+    (c) RNA sequence
+  </p>
+  <pre class="sequence-block">>RNA sequence
+CGCAGGGTGGAGAAGTGGTCATCTCGCCGGGCCCATAACCCGGAGATCGCTGGTTCGAATCCAGCCCTTGCTACCA</pre>
+
+  <p>
+    (d) Four protein sequences – for alignments and phylogenetic analyses
+  </p>
+
+  <pre class="sequence-block">
+>A protein  
+MNIRPLHDRVIIKREEVETRSAGGIVLTGSAATKSTRAKVLAVGKGRILENGTVQPLDVKVGDVIFNDGYGVKAEKIDGEEVLIISENDILAIVE  
+
+>B protein  
+MADIKFRPLHDRVVVRRVESEAKTAGGIIIPDTAKEKPQEGEVVAAGAGARDEAGKLVPLDVKAGDRVLFGKWSGTEVKIGGEDLLIMKESDILGIVG 
+
+>C protein  
+MNIRPLHDRVIVKRKEVETKSAGGIVLTGSAAAKSTRGEVLAVGNGRILENGEVKPLDVKVGDIVIFNDGYGVKSEKIDNEEVLIMSENDILAIVEA  
+
+>D protein  
+MKLRPLHDRVVIRRSEEETKTAGGIVLPGSAAEKPNRGEVVAVGTGRVLDNGEVRALAVKGDKVVFGPYSGSNAIKVDGEELLVMGESEILAVLED</pre>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Internet Resources for Molecular Biologists</p>
+  </footer>
+
+<script>
+  const pages = [
+    { name: "Home", link: "index.html" },
+    { name: "About Us", link: "aboutUs.html" },
+    { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
+    { name: "Carbohydrates", link: "carbohydrates.html" },
+    { name: "DNA Sequence Analysis", link: "dna-sequencing.html" },
+    { name: "Genomics", link: "genomics.html" },
+    { name: "Metabolomics", link: "metabolomics.html" },
+    { name: "Protein Sequence Analysis", link: "protein-sequence.html" },
+    { name: "RNA Sequence Analysis", link: "rna-sequence.html" },
+    { name: "Transcription Analysis", link: "transcription-analysis.html" },
+    { name: "Miscellaneous", link: "miscellaneous.html" },
+    { name: "Software", link: "software.html" },
+    { name: "GenBank", link: "genbank.html" }
+  ];
+
+  const searchBar = document.getElementById("search-bar");
+  const resultsDiv = document.getElementById("search-results");
+
+  //only show results when typing
+  searchBar.addEventListener("input", searchSite);
+
+  //hide dropdown when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-container")) {
+      resultsDiv.innerHTML = "";
+    }
+  });
+
+  function searchSite() {
+    const input = searchBar.value.toLowerCase().trim();
+    resultsDiv.innerHTML = "";
+
+    if (input.length === 0) return; //do nothing when empty
+
+    const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
+
+    if (filtered.length > 0) {
+      filtered.forEach(page => {
+        const link = document.createElement("a");
+        link.href = page.link;
+        link.textContent = page.name;
+        link.target = "_self";
+        resultsDiv.appendChild(link);
+      });
+    } else {
+      resultsDiv.innerHTML = "<p>No matches found.</p>";
+    }
+  }
+</script>
+
+<style>
+  .sequence-block {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(202, 210, 197, 0.3);
+    border-left: 3px solid #88a29e;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin: 15px 0 25px 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #e6e6e4;
+    line-height: 1.6;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .sequence-block:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(202, 210, 197, 0.4);
+  }
+</style>
+
+</body>
+</html>
