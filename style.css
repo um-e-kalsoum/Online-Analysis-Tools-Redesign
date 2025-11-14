@@ -252,6 +252,26 @@ nav ul li a:hover {
   padding-bottom: 10px;
 }
 
+.content a:not(.pill),
+.content a:not(.pill):link {
+  color: #FFFF6E;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.3s ease;
+}
+
+.content a:not(.pill):visited {
+  color: #ffd000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.content a:not(.pill):hover {
+  color: #fee35c;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* TUTORIAL SECTIONS */
 .tutorial-section h2 {
   color: #f2f2f2;
@@ -603,4 +623,71 @@ footer {
 .sequence-block:hover {
   background-color: rgba(255, 255, 255, 0.08);
   border-color: rgba(202, 210, 197, 0.4);
+}
+
+/* SOFTWARE PAGE STYLES */
+.software-item {
+  margin-bottom: 35px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(202, 210, 197, 0.2);
+}
+
+.software-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.software-item-content {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.software-image-placeholder {
+  flex: 0 0 150px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.software-text {
+  flex: 1;
+}
+
+.software-text h3 {
+  color: #f6f6f4;
+  font-size: 1.4rem;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+
+.software-text p {
+  color: #e6e6e4;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .software-item-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .software-image-placeholder {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+}
+
+.software-image-placeholder img {
+  width: 140px;     /* adjust the size you want */
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  display: block;
 }

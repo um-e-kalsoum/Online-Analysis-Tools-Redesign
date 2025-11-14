@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Software - Resource Hub</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <header>
-    <div class="logo"><a href="index.html">Resource Hub</a></div>
+    <div class="logo"><a href="../index.html">Resource Hub</a></div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#categories">Categories</a></li>
-        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#categories">Categories</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>
       </ul>
     </nav>
     <div class="search-container">
@@ -23,8 +23,8 @@
   </header>
 
   <div class="breadcrumbs">
-    <a href="index.html">Home</a> › 
-    <a href="index.html#categories">Categories</a> › 
+    <a href="../index.html">Home</a> › 
+    <a href="../index.html#categories">Categories</a> › 
     <span>Software</span>
   </div>
 
@@ -32,22 +32,17 @@
     <h1>Molecular Biology Freeware for Windows</h1>
 
     <p>
-      While a good place to is Genamics SoftwareSeek (Hyperlink) the following are some of my 
+      While a good place to is <a href="https://genamics.com/software/" target="_blank">Genamics SoftwareSeek</a> the following are some of my 
       favourites for DNA, RNA and genomic analysis, Plasmid graphic packages, Primer design,  
       Protein analysis, Viewing three dimensional structures, and Phylogeny.  Windows-based software 
       is emphasized though in many cases I don’t know whether the programs will run on Windows 11 machines. 
     </p>
 
-    <p>
-      A good place to start is <a href="https://google.com" target="_blank">Genamics SoftwareSeek</a>.  
-      The following sites are arranged in the order that they were discovered.  
-      At some point they will be clustered by preference.
-    </p>
 
     <section class="categories">
       <h2>Subcategories</h2>
       <div class="pill-container">
-        <a href="#" class="pill">DNA, RNA and Genomic Analysis</a>
+        <a href="pg1Software.html" class="pill">DNA, RNA and Genomic Analysis</a>
         <a href="#" class="pill">Plasmid Graphic Packages</a>
         <a href="#" class="pill">Primer Design</a>
         <a href="#" class="pill">Protein Analysis</a>
@@ -59,27 +54,29 @@
       </div>
     </section>
 
-    <p class="updated"><strong>Updated:</strong> October, 2025</p>
+    <p class="updated"><strong>Updated:</strong> November, 2025</p>
   </main>
 
   <footer>
     <p>© 2025 Internet Resources for Molecular Biologists</p>
   </footer>
 
-<script>
-  const pages = [
-    { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
-    { name: "Carbohydrates", link: "carbohydrates.html" },
-    { name: "DNA Sequence Analysis", link: "dna-sequencing.html" },
-    { name: "Genomics", link: "genomics.html" },
-    { name: "Metabolomics", link: "metabolomics.html" },
-    { name: "Protein Sequence Analysis", link: "protein-sequence.html" },
-    { name: "RNA Sequence Analysis", link: "rna-sequence.html" },
-    { name: "Transcription Analysis", link: "transcription-analysis.html" },
-    { name: "Miscellaneous", link: "miscellaneous.html" },
-    { name: "Software", link: "software.html" },
-    { name: "GenBank", link: "#" }
-  ];
+  <script>
+    const pages = [
+      { name: "Home", link: "../index.html" },
+      { name: "About Us", link: "../aboutUs.html" },
+      { name: "Bioinformatic Tutorials", link: "../bioinformatics.html" },
+      { name: "Carbohydrates", link: "../carbohydrates.html" },
+      { name: "DNA Sequence Analysis", link: "../dnaSequenceAnalysis.html" },
+      { name: "Genomics", link: "../genomics.html" },
+      { name: "Metabolomics", link: "../metabolomics.html" },
+      { name: "Protein Sequence Analysis", link: "../proteinSequenceAnalysis.html" },
+      { name: "RNA Sequence Analysis", link: "../rnaSequenceAnalysis.html" },
+      { name: "Transcription Analysis", link: "../transcriptionAnalysis.html" },
+      { name: "Miscellaneous", link: "../miscellaneous.html" },
+      { name: "Software", link: "software.html" },
+      { name: "GenBank", link: "../genBank.html" }
+    ];
 
   const searchBar = document.getElementById("search-bar");
   const resultsDiv = document.getElementById("search-results");
