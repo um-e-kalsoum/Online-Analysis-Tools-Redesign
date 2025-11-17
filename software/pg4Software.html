@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protein Analysis - Resource Hub</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="../index.html">Resource Hub</a></div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#categories">Categories</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </header>
+
+  <div class="breadcrumbs">
+    <a href="../index.html">Home</a> ›
+    <a href="../index.html#categories">Categories</a> ›
+    <a href="software.html">Software</a> ›
+    <span>Protein Analysis</span>
+  </div>
+
+  <main class="content">
+    <h1>Protein Analysis</h1>
+
+    <section class="tutorial-section">
+      <h2>Software Tools</h2>
+
+      <div class="software-item">
+        <div class="software-item-content">
+          <div class="software-image-placeholder">
+            <img src="pg4PicsSoftware/antheprot.gif" alt="SnapGene software">
+          </div>
+          <div class="software-text">
+            <h3>ANTHEPROT</h3>
+            <p>
+<a href="https:www.google.com" target="_blank">ANTHEPROT</a> (ANalyse THE PROTeins) is the result of biocomputing activity at the Institute of Biology and Chemistry of Proteins (Lyon, France)            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="software-item">
+        <div class="software-item-content">
+          <div class="software-image-placeholder">
+            <img src="pg4PicsSoftware/STORM.jpg" alt="SnapGene software">
+          </div>
+          <div class="software-text">
+            <h3>STORM</h3>
+            <p>
+<a href="https://www.biw.kuleuven.be/logt/STORM.htm" target="_blank">STORM</a> - this program extracts protein sequences after ORF prediction and subsequently performs an automatic analysis for each of the proteins. This analysis consists of web-based similarity searches (BLASTp and FASTA) as well as Pfam predictions and Protparam calculations of protein physicochemical properties. The raw output for these analyses is then analysed and summarized. </p>
+<p><strong>(Reference:</strong> Lavigne, R. et al. (2003.) Applied Bioinformatics 2: 177-179).</p>            
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <p class="updated"><strong>Updated:</strong> October, 2025</p>
+  </main>
+
+  <footer>
+    <p>© 2025 Internet Resources for Molecular Biologists</p>
+  </footer>
+
+  <script>
+    const pages = [
+      { name: "Home", link: "../index.html" },
+      { name: "About Us", link: "../aboutUs.html" },
+      { name: "Bioinformatic Tutorials", link: "../bioinformatics.html" },
+      { name: "Carbohydrates", link: "../carbohydrates.html" },
+      { name: "DNA Sequence Analysis", link: "../dnaSequenceAnalysis.html" },
+      { name: "Genomics", link: "../genomics.html" },
+      { name: "Metabolomics", link: "../metabolomics.html" },
+      { name: "Protein Sequence Analysis", link: "../proteinSequenceAnalysis.html" },
+      { name: "RNA Sequence Analysis", link: "../rnaSequenceAnalysis.html" },
+      { name: "Transcription Analysis", link: "../transcriptionAnalysis.html" },
+      { name: "Miscellaneous", link: "../miscellaneous.html" },
+      { name: "Software", link: "software.html" },
+      { name: "GenBank", link: "../genBank.html" }
+    ];
+
+    const searchBar = document.getElementById("search-bar");
+    const resultsDiv = document.getElementById("search-results");
+
+    searchBar.addEventListener("input", searchSite);
+
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".search-container")) {
+        resultsDiv.innerHTML = "";
+      }
+    });
+
+    function searchSite() {
+      const input = searchBar.value.toLowerCase().trim();
+      resultsDiv.innerHTML = "";
+
+      if (input.length === 0) return;
+
+      const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
+
+      if (filtered.length > 0) {
+        filtered.forEach(page => {
+          const link = document.createElement("a");
+          link.href = page.link;
+          link.textContent = page.name;
+          link.target = "_self";
+          resultsDiv.appendChild(link);
+        });
+      } else {
+        resultsDiv.innerHTML = "<p>No matches found.</p>";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
