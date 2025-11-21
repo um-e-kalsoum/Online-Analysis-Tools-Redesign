@@ -2,8 +2,9 @@
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
-  background-color: #354f52; /* main background */
-  color: #f6f6f4; /* light text for contrast */
+  background-color: #354f52;
+  color: #f6f6f4;
+
 }
 
 /* HEADER */
@@ -14,7 +15,9 @@ header {
   align-items: center;
   padding: 25px 60px;
   background-color: #354f52;
+
   border-bottom: 2px solid #cad2c5;
+
   position: sticky;
   top: 0;
   z-index: 1000;
