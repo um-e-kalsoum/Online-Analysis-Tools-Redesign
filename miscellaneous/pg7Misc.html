@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buffers - Resource Hub</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="../index.html">Resource Hub</a></div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#categories">Categories</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </header>
+
+  <div class="breadcrumbs">
+    <a href="../index.html">Home</a> ›
+    <a href="../index.html#categories">Categories</a> ›
+    <a href="miscellaneous.html">Miscellaneous</a> › 
+    <span>Convertions</span>
+    
+  </div>
+
+  <main class="content">
+    <h1>Convertions</h1>
+
+    <p>Several sites are available for conversion of sequence from one format to another.  These include:</p>
+
+    <ul>
+        <li><a href="http://genome2d.molgenrug.nl/g2d_tools_conversions.html">Genome2D Genome Tools</a> (Dr. Anne de Jong, Molecular Genetics, University of Groningen, The Netherlands) - this is my go-to site for all manner of analyses.  Under "Genome Tools" select "Conversions." This will allow you to convert a GenBank flatfile (gbk) to GFF (General Feature Format, table), CDS (coding sequences), Proteins (FASTA Amino Acids, faa), DNA sequence (Fasta format). </li>
+        <br>
+
+        <li><a href="https://test.galaxyproject.org/">Galaxy</a> is an open, web-based platform for accessible, reproducible, and transparent computational biomedical research. This web server makes analysis tools, genomic data, tutorial demonstrations, persistent workspaces, and publication services available to any scientist. Extensive user documentation applicable to any public or local Galaxy instance is available. Offers a huge varierty of tools for analysis and file interconversion.</li>
+        <br>
+
+        <li><a href="https://www.bioinformatics.org/sms2/filter_dna.html">Sequence Manipulation Suite (SMS)</a> - this program allows you to remove digits and blank spaces from a sequence to make it suitable for other applications.  Also found <a href="https://www.bioinformatics.org/sms2/">here.</a></li>
+        <br>
+
+        <li><a href="https://sequenceconversion.bugaco.com/converter/biology/sequences/">Sequence conversion</a> (Bioinf @ Bugaco) - a huge suite of conversion tools.</li>
+        <br>
+
+        <li>Readseq developed by D.G. Gilbert (Indiana University) reads and converts biosequences between a selection of common biological sequence formats, including EMBL, GenBank and fasta sequence formats is available <a href="http://phylogeny.lirmm.fr/phylo_cgi/one_task.cgi?task_type=readseq">here.</a></li>
+        <br>
+
+        <li><a href="https://emboss.bioinformatics.nl/cgi-bin/emboss/seqret?_pref_hide_optional=1">EMBOSS Seqret</a> reads and writes (returns) sequences. It is useful for a variety of tasks, including extracting sequences from databases, displaying sequences, reformatting sequences, producing the reverse complement of a sequence, extracting fragments of a sequence, sequence case conversion or any combination of the above functions.</li>        
+        <br>
+
+        <li><a href="https://www.hiv.lanl.gov/content/sequence/FORMAT_CONVERSION/form.html">Format Converter</a> - This program takes as input a sequence or sequences (e.g., an alignment) in an unspecified format and converts the sequence(s) to a different user-specified format. Also converts *.gbk to *.gff3.</li>
+        <br>
+
+        <li><a href="https://miat.inrae.fr/ApolloRNA/convert.html">ApolloRNA Convert data</a> - Transformation of TransTermHP, CRISPRfinder, MOSAIC, PatScan, DARN! (GFF), GenBank output data in GFF and GAME XML format data that can be read by Apollo.</li>
+        <br>
+
+        <li><a href="https://www.bioinformatics.org/sms2/genbank_trans.html">GenBank Trans Extractor</a> accepts a GenBank file as input and returns each of the protein translations described in the file in FASTA format. GenBank Trans Extractor should be used when you are more interested in the predicted protein translations of a DNA sequence than the DNA sequence itself. Part of the Sequence Manipulation Suite.</li>
+        <br>
+
+        <li><a href="https://services.healthtech.dtu.dk/services/FeatureExtract-1.2/">FeatureExtract 1.2</a> - extracts sequence and feature annotation, such as intron/exon structure, from GenBank entries and other GenBank format files. 
+            <br>(<strong>Reference:</strong> R. Wernersson (2005) Nucleic Acids Res. 33(Web Server issue): W567–W569).</li>
+        <br>
+
+        <li><a href="https://haloweb.org/cgi-bin/haloweb/nrc1.pl?operation=overload&src=https%3A%2F%2Fhaloweb.org%2Fcgi-bin%2Fhaloweb%2Fseq_editor.pl%3Fspf%3Dnavigate">Sequence editor</a> (part of Shiladitya DasSarma's <a href="https://haloweb.org/">HaloWeb:</a> The Haloarchaeal Genomes Database) - converts DNA and RNA sequences. Generate antiparallel, complement and inverse sequences.</li>
+        <br>
+
+        <li><a href="http://phylogeny.lirmm.fr/phylo_cgi/data_converter.cgi">Format conversion</a> - (single sequence, set of sequences, alignment, tree, matrix, ...) and format are automatically recognized. Output: FASTA, NEXUS, PHYLIP, Clustal, EMBL, Newick, New Hampshire).</li>
+        <br>
+
+        <li><a href="https://users-birc.au.dk/~palle/php/fabox/index.php">Fasta dataset splitter</a> - Part of FaBox (see below)</li>
+        <br>
+
+        <li><a href="https://chlorobox.mpimp-golm.mpg.de/GenBank2Sequin.html">GenBank 2 Sequin</a> (P. Lehwark & S. Greiner, Max-Planck Institute for Molecular Plant Physiology, Germany) -  this extremely usesful program is designed to convert revised GeSeq output into the Sequin format which used to be required for <a href="https://www.ncbi.nlm.nih.gov/genbank/submit/">NCBI submission.</a> It also generates formats which can be used for small genome submissions.  None the less, any custom GenBank file can be prepared for <a href="https://www.ncbi.nlm.nih.gov/genbank/submit/">NCBI submission</a> using GenBank 2 Sequin</li>
+        <br>
+
+        <li><a href="https://www.bioinformatics.org/jambw/">JaMBW</a>(European Molecular Biology Laboratory of Heidelberg, Germany). Java based Molecular Biologist's Workbench.Select Chapter 1 for sequence format conversion (upper <-> lower case; T <-> U; reverse or complement sequence).</li>
+        <br>
+
+        <li><a href="https://biomodel.uah.es/en/lab/cybertory/analysis/massager.htm">Nucleic Acid Sequence Massager</a> (Allotron Biosensor Corporation) which in addition to removing spurious material (numbers, breaks, HTML, spaces) changes the format (upper to low case, complement, reverse, RNA to DNA, and triplets). </li>
+        <br>
+
+        <li>extractUpStreamDNA (A. Villegas, Public Health Ontario) - takes a Genbank flatfile (*.gbk) as input and parses through and for every CDS that it finds, it extracts a pre-determined length of DNA upstream (length will be an argument; and will include 3 nt for the initiation codon). Output will be an FFN file of these upstream DNA sequences.  N.B. this only WORKS for prokaryotic sequences because it does not handle Splits or Joins found in eukaryotic.  This data then can be analyzed with programs such as <a href="https://meme-suite.org/meme/">MEME.</a>This program is temporarily unavailable online, though one can download it from <a href="https://github.com/ajvilleg">here</a></li> 
+        <br>
+
+        <li><a href="https://rocaplab.ocean.washington.edu/tools/genbank_to_fasta/">Convert GenBank to Fasta</a> (G. Rocap, School of Oceanography, University of Washington, U.S.A.) - Select a GenBank formatted file containing a feature table. Select whether to extract translated peptide sequences, DNA sequence for each feature, or the entire DNA sequenceof the whole record. If you chose "Peptide Sequence", your feature table must have "translation" sub-features.</li>
+        <br>
+
+        <li><a href="https://chlorobox.mpimp-golm.mpg.de/GenBank-JSON-Converter.html">GenBank-JSON-Conversion</a> - this converter accepts multi-sequence GenBank, DDBJ, or EMBL/ENA files (*.gb, *.gbk, *.gbf, *.genbank, *.gbff, *.ena, *.embl or *.txt). Alternatively, enter NCBI accession number(s) or upload them in a *.csv file.</li>
+        <br>
+
+        <li><a href="https://users-birc.au.dk/~palle/php/fabox/index.php">FaBox</a> (Palle Villesen Fredsted, Aarhus University, Denmark) - an online fasta sequence toolbox, including Fasta header editor, Fasta header replacer, Fasta sequence extractor, Fasta sequence subtractor, Fasta sequence joiner, Fasta dataset splitter/divider</li>
+        <br>
+
+        <li><a href="http://seqscrub.gabefoley.com/">SeqScrub</a> - is a web application that cleans up FASTA file headers and appends information from external databases. 
+            <br>(<strong>Reference:</strong> Foley G et al. (2019) BioTechniques 67(2): 50-54).</li>
+        <br>
+
+        <li><a href="https://www.bork.embl.de/pal2nal/">PAL2NAL</a> - is a program that converts a multiple sequence alignment of proteins and the corresponding DNA (or mRNA) sequences into a codon alignment. The program automatically assigns the corresponding codon sequence even if the input DNA sequence has mismatches with the input protein sequence, or contains UTRs, polyA tails. It can also deal with frame shifts in the input alignment, which is suitable for the analysis of pseudogenes. The resulting codon alignment can further be subjected to the calculation of synonymous (dS) and non-synonymous (dN) substitution rates. 
+            <br>(<strong>Reference:</strong> Suyama M et al. (2006) Nucl Acids Res 34: W609-W612).</li>
+        <br>
+
+        <li><a href="https://www.bioinformatics.org/sms2/shuffle_dna.html">Shuffle</a> DNA and <a href="http://www.cellbiol.com/scripts/randomizer/dna_protein_sequence_randomizer.php">Sequence Randomizer</a> permit one to randomize a sequence to compare with one's own.</li>
+        <br>
+
+        <li><a href="https://molbiotools.com/randomsequencegenerator.php">Random Sequence Generator</a> (Vladimír Cermák, molbiotools.com) - generate random DNA, RNA or protein sequences. Based on the Mersenne Twister algorithm. No unwanted repeats are generated even in very long sequences. Can be used for calculations of DNA, RNA and protein molecular weights and for string reverse and complement transformations.</li>
+        <br>
+    </ul>
+    
+    </section>
+
+    <p class="updated"><strong>Updated:</strong> November, 2025</p>
+  </main>
+
+  <footer>
+    <p>© 2025 Internet Resources for Molecular Biologists</p>
+  </footer>
+
+<script>
+  const pages = [
+    { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
+    { name: "Carbohydrates", link: "carbohydrates.html" },
+    { name: "Buffers", link: "buffers.html" },
+    { name: "Metabolomics", link: "metabolomics.html" },
+    { name: "Genomics", link: "genomics.html" },
+    { name: "DNA Sequence Analysis", link: "https://google.com" },
+    { name: "Protein Sequence Analysis", link: "https://google.com" },
+    { name: "RNA Sequence Analysis", link: "https://google.com" },
+    { name: "Transcription Analysis", link: "https://google.com" },
+    { name: "Miscellaneous", link: "https://google.com" },
+    { name: "Software", link: "https://google.com" },
+    { name: "GenBank", link: "https://google.com" }
+  ];
+
+  const searchBar = document.getElementById("search-bar");
+  const resultsDiv = document.getElementById("search-results");
+
+  searchBar.addEventListener("input", searchSite);
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-container")) {
+      resultsDiv.innerHTML = "";
+    }
+  });
+
+  function searchSite() {
+    const input = searchBar.value.toLowerCase().trim();
+    resultsDiv.innerHTML = "";
+    if (input.length === 0) return;
+
+    const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
+    if (filtered.length > 0) {
+      filtered.forEach(page => {
+        const link = document.createElement("a");
+        link.href = page.link;
+        link.textContent = page.name;
+        link.target = "_self";
+        resultsDiv.appendChild(link);
+      });
+    } else {
+      resultsDiv.innerHTML = "<p>No matches found.</p>";
+    }
+  }
+</script>
+
+</body>
+</html>

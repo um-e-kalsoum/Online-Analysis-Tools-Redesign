@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miscellaneous - Resource Hub</title>
+  <title>Buffers - Resource Hub</title>
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -23,33 +23,19 @@
   </header>
 
   <div class="breadcrumbs">
-    <a href="../index.html">Home</a> › 
-    <a href="../index.html#categories">Categories</a> › 
-    <span>Miscellaneous</span>
+    <a href="../index.html">Home</a> ›
+    <a href="../index.html#categories">Categories</a> ›
+    <a href="miscellaneous.html">Miscellaneous</a> › 
+    <span>Centrifugation Calculations</span>
+    
   </div>
 
   <main class="content">
-    <h1>Miscellaneous</h1>
-    <p>
-      These pages provide links to useful tools including graphical displays, and calculators for buffers, 
-      centrifugal force, radioactive decay etc.
-      </p>
-
-    <section class="categories">
-      <h2>Subcategories</h2>
-      <div class="pill-container">
-        <a href="pg1Misc.html" class="pill">Buffers</a>
-        <a href="pg2Misc.html" class="pill">Centrifugation Calculations</a>
-        <a href="pg3Misc.html" class="pill">General Molecular Biology Calculations</a>
-        <a href="pg4Misc.html" class="pill">Meta Sites for DNA & Protein Analysis</a>
-        <a href="pg5Misc.html" class="pill">Sequence Cleanup & Conversion</a>
-        <a href="pg6Misc.html" class="pill">Online Graphics</a>
-        <a href="pg7Misc.html" class="pill">Convert</a>
-
-      </div>
+    <h1>Centrifugation Calculations</h1>
+    
     </section>
 
-    <p class="updated"><strong>Updated:</strong> October, 2025</p>
+    <p class="updated"><strong>Updated:</strong> November, 2025</p>
   </main>
 
   <footer>
@@ -60,15 +46,16 @@
   const pages = [
     { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
     { name: "Carbohydrates", link: "carbohydrates.html" },
-    { name: "DNA Sequence Analysis", link: "dna-sequencing.html" },
-    { name: "Genomics", link: "genomics.html" },
+    { name: "Buffers", link: "buffers.html" },
     { name: "Metabolomics", link: "metabolomics.html" },
-    { name: "Protein Sequence Analysis", link: "protein-sequence.html" },
-    { name: "RNA Sequence Analysis", link: "rna-sequence.html" },
-    { name: "Transcription Analysis", link: "transcription-analysis.html" },
-    { name: "Miscellaneous", link: "miscellaneous.html" },
-    { name: "Software", link: "#" },
-    { name: "GenBank", link: "#" }
+    { name: "Genomics", link: "genomics.html" },
+    { name: "DNA Sequence Analysis", link: "https://google.com" },
+    { name: "Protein Sequence Analysis", link: "https://google.com" },
+    { name: "RNA Sequence Analysis", link: "https://google.com" },
+    { name: "Transcription Analysis", link: "https://google.com" },
+    { name: "Miscellaneous", link: "https://google.com" },
+    { name: "Software", link: "https://google.com" },
+    { name: "GenBank", link: "https://google.com" }
   ];
 
   const searchBar = document.getElementById("search-bar");
@@ -85,11 +72,9 @@
   function searchSite() {
     const input = searchBar.value.toLowerCase().trim();
     resultsDiv.innerHTML = "";
-
     if (input.length === 0) return;
 
     const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
-
     if (filtered.length > 0) {
       filtered.forEach(page => {
         const link = document.createElement("a");
