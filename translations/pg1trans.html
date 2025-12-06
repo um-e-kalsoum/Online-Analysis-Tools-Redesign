@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buffers - Resource Hub</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="../index.html">Resource Hub</a></div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#categories">Categories</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </header>
+
+  <div class="breadcrumbs">
+    <a href="../index.html">Home</a> ›
+    <a href="../index.html#categories">Categories</a> ›
+    <a href="translations.html">Translations</a> › 
+    <span>General Translations</span>
+    
+  </div>
+
+  <main class="content">
+    <h1>General Translations: DNA to Protein</h1>
+
+    <p>SITES: A number of excellent sites exist all of which permit translation in all six reading frames. I would recommend "ORF Finder" because of its visuals and Pipeline or GeneMark if you are seriously interested in identifying genes within your sequence.   The latter two programs permit the analysis of long sequences (submit by attachment not in the box). </p>
+
+    <h2>Frameshift errors: </h2>
+    <ul>
+        <li><a href="https://bioinfo.univ-lille.fr/path/form.php">path :: protein back-translation and alignment</a> - addresses the problem of finding distant protein homologies where the divergence is the result of frameshift mutations and substitutions. Given two input protein sequences, the method implicitly aligns all the possible pairs of DNA sequences that encode them, by manipulating memory-efficient graph representations of the complete set of putative DNA sequences for each protein. 
+            <br>(<strong>Reference:</strong> Gîrdea M et al. 2010. Algorithms for Molecular Biology 5:)</li>
+        <br>
+    </ul>
+
+    <h2>Simple translation tools - DNA to protein sequences:</h2>
+    <ul>
+        
+        <li><a href="https://www.ncbi.nlm.nih.gov/orffinder/">Open Reading Frame Finder</a> (NCBI) - searches for open reading frames (ORFs) in the DNA sequence you enter. The program returns the range of each ORF, along with its protein translation. Use ORF finder to search newly sequenced DNA for potential protein encoding segments, verify predicted protein using newly developed SMART BLAST or regular BLASTP. </li>
+        <br>
+        <li>Six-frame Translations can be done at <a href="https://toolkit.tuebingen.mpg.de/tools/sixframe">Tuebingen</a> and <a href="https://www.bioline.com/media/calculator/01_13.html">Bioline,</a> </li>
+        <br>
+        <li><a href="https://www.ebi.ac.uk/jdispatcher/">EMBOSS Sixpack</a> (EMBL-EBI) - reads a DNA sequence and outputs the three forward and (optionally) three reverse translations in a visual manner. Alternatively use <a href ="https://www.ebi.ac.uk/jdispatcher/">EMBOSS Transeq</a></li>
+        <br>
+        <li>Other DNA to Protein translation sites are to be found <a href="">here</a> (University of Gottenburg, Sweden) and  <a href="http://insilico.ehu.es/translate/">here</a> (University of the Basque Country, Spain)</li>
+        <br>
+        <li><a href="https://web.expasy.org/translate/">Translate</a> (ExPASy, Switzerland)  - is a tool which allows the translation of a nucleotide (DNA/RNA) sequence to a protein sequence.</li>
+    </ul>
+
+    <h2>Translation of multiple sequences:</h2>
+    <ul>
+        <li><a href="https://services.healthtech.dtu.dk/services/VirtualRibosome-2.0/">Virtual Ribosome</a> -The Virtual Ribosome is a comprehensive tool for translating DNA sequences to the corresponding peptide sequences.Besides being a strong translation tool in it's own right (with an integrated ORF finder, support for all translation tables defined by the NCBI taxonomy group, and a number of options regarding START and STOP codons), the Virtual Ribosome can work directly on files containing annotation of gene structure. This makes it easy to map various aspect of Intron/Exon structure onto the translated sequence.
+            <br>(<strong>Reference:</strong> R. Wernersson. 2006. Nucl. Acids Res. 34 (web Server Issue): W385-388)</li>
+        <br>
+        <li><a href="https://services.healthtech.dtu.dk/services/RevTrans-2.0/">RevTrans</a> - takes a set of DNA sequences, virtually translates them, aligns the peptide sequences, and uses this as a scaffold for constructing the corresponding DNA multiple alignment. New in RevTrans 2.0: Integration with Virtual Ribosome for translation and ORF finding, visualization of alignments using JalView, more alignments programs: MAFFT, T-COFFEE, Dialign 2, Dialign-T and ClustalW2. Improved tab-based interface. 
+            <br>(<strong>Reference:</strong> Wernersson R & Pedersen AG (2003) Nucl. Acids Res. 31(13): 3537-3539).</li>
+        <br>
+        <li><a href="http://161.111.160.230/index_v5.html">TranslatorX</a> - is a web server designed to align protein-coding nucleotide sequences based on their corresponding amino acid translations. TranslatorX novelties include: (i) use of all documented genetic codes and the possibility of assigning different genetic codes for each sequence; (ii) a battery of different multiple alignment programs; (iii) translation of ambiguous codons when possible; (iv) an innovative criterion to clean nucleotide alignments with GBlocks based on protein information; and (v) a rich output, including Jalview-powered graphical visualization of the alignments, codon-based alignments coloured according to the corresponding amino acids, measures of compositional bias and first, second and third codon position specific alignments. 
+            <br>(<strong>Reference:</strong> Abascal F, et al. (2010) Nucleic Acids Res. 38: W7-13).</li>
+        <br>
+    </ul>
+
+    <h2>Backtranslation i.e. taking a protein sequence and defining it as DNA sequence:</h2>
+    <ul>
+        <li><a href="https://www.geneinfinity.org/sms/sms_backtranslation.html">Back Translation</a> - part of the The Sequence Manipulation Suite; limited choice of codon usage (E.coli and H. sapiens)</li>
+        <br>
+        <li><a href="https://www.biophp.org/minitools/protein_to_dna/demo.php">Protein to DNA reverse translation</a> - includes a wide range of genetic codes (BioPHP PHP for Bioinformatics)</li>
+        <br>
+        <li><a href="https://toolkit.tuebingen.mpg.de/tools/backtrans">BackTranslator</a> (Max Planck Institute for Biology, Tübingen)</li>
+        <br>
+    </ul>
+
+    <h2>Identification of open-reading frames:</h2>
+    <ul>
+        <li><a href="http://star.mit.edu/orf/">StarORF</a> - facilitates the identification of the protein(s) encoded within a DNA sequence. Using StarORF, the DNA sequence is first transcribed into RNA and then translated into all the potential ORFs (Open Reading Frame) encoded within each of the six translation frames (3 in the forward direction and 3 in the reverse direction). This allows students to identify the translation frame that results in the longest protein coding sequence.</li>
+        <br>
+        <li><a href="http://opal.biology.gatech.edu/GeneMark/">GeneMark</a> Homepage (M. Borodovsky, Georgia Institute of Technology Atlanta, U.S.A.) offers a family of programs for ORF analysis.  This site links one to a growing number of programs for modeling phage, bacterial, and eukaryotic data. Extensive control is possible with the data output, i.e. one can request the nucleotide and protein sequence of the ORFs.  Two programs to consider are <a href ="https://exon.gatech.edu/GeneMark/genemarks.cgi">GeneMarkS</a> 
+            <br>(<strong>Reference:</strong> Besemer J et al. 2001. Nucleic Acids Research; 29:2607-2618) 
+            <br>or <a href = "https://exon.gatech.edu/GeneMark/genemarks2.cgi">GeneMarkS-2</a> and <a href = "https://exon.gatech.edu/GeneMark/heuristic_gmhmmp.cgi">Heuristic Approach for Gene Prediction</a> 
+            <br>(<strong>Reference:</strong> Besemer J & Borodovsky M. 1999. Nucleic Acids Research; 27:911 3920).  
+            <br>For metagenomic analysis use <a href = "https://exon.gatech.edu/GeneMark/meta_gmhmmp.cgi">MetaGeneMark</a> 
+            <br>(<strong>Reference:</strong> Zhu, W. et al. 2010. Nucleic Acids Research; 38: e132). </li>
+        <br>
+        <li><a href="https://services.healthtech.dtu.dk/services/EasyGene-1.2/">EasyGene</a> -  produces a list of predicted genes given a sequence of prokaryotic DNA. Each prediction is attributed with a significance score (R-value) indicating how likely it is to be just a non-coding open reading frame rather than a real gene. The user needs only to specify the organism hosting the query sequence.  
+            <br>(<strong>Reference:</strong> T.S. Larsen & A. Krogh. (2003). BMC Bioinformatics 4: 21)</li>
+        <br>
+        <li><a href="https://nocardia.nih.go.jp/fp4/">FramePlot 4.0</a> (National Institute of Health, Japan) - This site permits one to select the minimal size of the ORF, and the start codon (ATG or GTG being the most common).  While in presentation (a series of coloured arrows is somewhat confusing by clicking on any arrow one can view the DNA and protein sequence.  These can be used in homology (BLASTN & BLASTP) searches. 
+            <br>(<strong>Reference:</strong> Ishikawa,J. & Hotta K. 1999. FEMS Microbiol. Lett. 174 :251-253).</li>
+        <br>
+        <li><a href="https://web.expasy.org/translate/">ExPASy</a> – Translate tool (ExPASy, University of Geneva, Switzerland).  I find this site useful if I have a gene which begins with an alternative start codon. </li>
+        <br>
+    </ul>
+
+    <h2>Codon usage:</h2>
+    <p>When you have identified a potential gene you might want to determine its codon usage. Codon Adaptation Index (CAI) is a technique for analyzing Codon usage bias. CAI measures the deviation of a given protein coding gene sequence with respect to a reference set of genes</p>
+    <ul>
+        <li>For quantitative data on general codon usage in different cells consult the <a href="https://www.kazusa.or.jp/codon/">Codon Usage Database</a> (Kazusa DNA Research Institute, Japan) -  Unfortunately the data is presented in frequency charts which have to be manually converted to % codon usage for specific amino acids. In addition, the data has not been updated since 2007.  For Information on the codons see   DNA analysis (<a href ="https://www.bioinformatics.org/SMS/">Codon Usage</a>) which is part of the The Sequence Manipulation Suite(Paul Stothard) at Bioinformatics.org/The Open Lab. </li>
+        <br>
+        <li>Inidon (Andre Villegas, Public Health Ontario, Canada) - this Java-based program reads GenBank *.ffn files (FASTA formatted gene files) and provides one with a numeric and percentage usage of start codons.  The latter can be downloaded for sequenced genomes from the GenBank genome site. For bacteriophage and other smaller genomes locate the file using the "search genome" function at NCBI and select "Views - coding regions."  From the next screen use "Save - FASTA nucleotide."  This program is currently unavailable online but the perl script can be downloaded from here.</li>
+        <br>
+        <li><a href="https://umbc.edu/">CAI Calculator 2</a> (John Peden) - Codon usage is biased within and across genomes. The unequal frequency of codons results mainly from overall base composition of the genome however some genes, such those which are highly expressed, tend to exhibit stronger codon bias. Sharp & Li (1987) proposed to use codon adaptation index to evaluate how well a gene is adapted to the translational machinery. CAI is a single value measurement that summarizes the codon usage of a gene relative to the codon usage of a reference set of genes. A higher CAI value usually suggests that the gene of interest is likely to be highly expressed. This site offers the choice of Sharp & Li (1987) or Eyre-Walker (1996) equations for calculating CAI.</li>
+        <br>
+        <li><a href="https://ppuigbo.me/programs/CAIcal/">CAIcal</a> - performs several computations in relation to codon usage and the codon adaptation of DNA or RNA sequences to host organisms. 
+            <br>(<strong>Reference:</strong> Puigbo, P. et al. 2008. Biology Direct 3:38).</li>
+        <br>
+        <li><a href="https://ppuigbo.me/programs/CAIcal/">E-CAI</a> (Expected CAI calculation) - calculates the expected value of the Codon Adaptation Index (CAI) for a set of query sequences by generating random sequences with similar G+C content and amino acid composition to the input. This expected CAI therefore provides a direct threshold value for discerning whether the differences in the CAI value are statistically significant and arise from the codon preferences or whether they are merely artifacts that arise from internal biases in the G+C composition and/or amino acid composition of the query sequences. 
+            <br>(<strong>Reference:</strong> Puigbo, P. et al. 2008. BMC Bioinformatics 9:65).</li>
+        <br>
+        <li><a href="https://gcua.schoedl.de/">GCUA</a> - Graphical Codon UsAge (Universität Regensburg Naturwissenschaftliche Fakultät III, Germany) - offers three possibilities: (a) each triplet position vs usage table - the fraction of usage of each codon in the selected organism is presented; (b) each codon vs. usage table - the fraction of usage of each codon in the submitted sequence will be computed and plotted against the fraction of usage of the codon in the selected organism; and, (c) compare two usage tables - submit or choose two codon usage tables. The fraction of usage of each codon in the submitted usage tables will be compared graphically.</li>
+        <br>
+        <li><a href="http://codonstatsdb.unr.edu/">Codon Statistics Database:</a> A Database of Codon Usage Bias - Enter a taxonomy ID (e.g. “9606”), the name of a species (e.g. “Human” or "Homo sapiens") or a group of species (e.g. “Primates”). Then select an option from the drop-down menu and press "Submit". It then provides two sets of tables. One set lists, for each codon, the frequency, the Relative Synonymous Codon Usage, and whether the codon is preferred. Another set of tables lists, for each gene, its GC content, Effective Number of Codons, Codon Adaptation Index, and frequency of optimal codons.
+            <br>(<strong>Reference:</strong> Subramanian K et al. (2020) Molec Biol Evol 39(8) DOI: https://doi.org/10.1093/molbev/msac157)</li>
+        <br>
+        <li><a href="https://www.genscript.com/tools/rare-codon-analysis">Rare codon analysis tool</a> (GenScript USA Inc.) - it is extremely useful to analyze your coding sequences for codon usage prior to attempting protein expression.  This tools offers two bacteria (E.coli & Streptomyces), a variety of plants (Nicotonia & Arabidopsis), animals (human & insects) and yeast (Pichia & Saccharomyces). </li>
+        <br>
+        <li><a href="https://www.bork.embl.de/pal2nal/">PAL2NAL</a> - a program that converts a multiple sequence alignment of proteins and the corresponding DNA (or mRNA) sequences into a codon alignment. The program automatically assigns the corresponding codon sequence even if the input DNA sequence has mismatches with the input protein sequence, or contains UTRs, polyA tails. It can also deal with frame shifts in the input alignment, which is suitable for the analysis of pseudogenes. The resulting codon alignment can further be subjected to the calculation of synonymous (d<sub>s</sub>) and non-synonymous d<sub>N</sub> substitution rates. 
+            <br>(<strong>Reference:</strong> Suyama M et al. 2006. Nucleic Acids Res. 34: W609-W612).</li>
+        <br>
+    </ul>
+
+    <h2>If you want to express a gene in an organism having different different codon usage:</h2>
+    <ul>
+        <li><a href="">JCat</a> - Codon Adapter Tool - offers a complete range of eukaryotic & prokaryotic cells; and, the ability to select against rho-independent terminators and restriction sites. 
+            <br>(<strong>Reference:</strong> A. Grote et al. 2005. Nucl. Acids Res. 33: W526-W531).</li>
+        <br>
+        <li><a href="">OPTIMIZER</a>: a web server for optimizing the codon usage of DNA sequences - one can use pre-computed tables from more than 150 prokaryotic species under a strong translational selection. Three methods of optimization are available: the 'one amino acid - one codon' approach, a random approach or an intermediate one. Several options, such as avoiding specific restriction sites and several outputs, are also available. This server can be useful for predicting and optimizing the level expression of a gene in heterologous gene expression.
+            <br>(<strong>Reference:</strong> P. Puigbò et al. 2007. Nucl. Acids Res. 35(Web Server issue): W126-131).</li>
+        <br>
+        <li><a href="https://www.idtdna.com/page/support-and-education/decoded-plus/using-a-codon-optimization-tool-how-it-works-and-advantages-it-provides/">IDT Codon Optimization Tool</a> - was developed to optimize a DNA or protein sequence from one organism for expression in another by reassigning codon usage based on the frequencies of each codon’s usage in the new organism. For example, valine is encoded by 4 different codons (GUG, GUU, GUC, and GUA). In human cell lines, however, the GUG codon is preferentially used (46% use vs. 18, 24, and 12%, respectively). The codon optimization tool takes this information into account and assigns valine codons with those same frequencies. In addition, the tool algorithm eliminates codons with less than 10% frequency and re-normalizes the remaining frequencies to 100%. Moreover, our optimization tool reduces complexities that can interfere with manufacturing and downstream expression, such as repeats, hairpins, and extreme GC content.  requires registration.</li>
+        <br>
+        <li><a href="https://www.genscript.com/gensmart-free-gene-codon-optimization.html?src=google&google&utm_source=google&utm_medium=cpc&utm_campaign&utm_keyword=codon%20optimization%20tool%20free">GenSmart™ Codon Optimization</a> - is a free, user-friendly online tool that enables you to optimize the design of wild type or recombinant gene sequences towards higher expression in prokaryotic and mammalian expression systems.</li>
+        <br>
+        <li>VectorBuilder’s <a href="https://en.vectorbuilder.com/tool/codon-optimization.html">Codon Optimization Tool</a> is designed to help you achieve the optimal codon adaptation index (CAI) for your GOI in any organism of your choice. It includes a comprehensive list of species and is seamlessly incorporated into our online vector design platform enabling you to optimize your GOIs while designing vectors. Additionally, it allows you to avoid cleavage sites of selected restriction enzymes while codon optimizing your target sequence. Our tool can be used for optimizing sequences with extreme GC content and simple repeats for highly efficient gene synthesis and DNA cloning applications.</li>
+        <br>
+        <li><a href="https://salislab.net/software/login">RBS Calculator</a> - they developed a biophysical model employing thermodynamic first principles and a four-parameter free energy model to accurately predict the ribosome’s translation initiation rates for 136 synthetic 5′ UTRs with large structures, diverse shapes and multiple standby site modules. The model predicts and experiments confirm that the ribosome can readily bind distant standby site modules that support high translation rates, providing a physical mechanism for observed context effects and long-range post-transcriptional regulation. 
+            <br>(<strong>Reference:</strong>  A. E. Borujeni, et al. 2014. Nucleic Acid Research; 42 (4):  2646–2659).</li>
+        <br>
+    </ul>
+
+    <p>IRES (Internal Ribosome Entry Site) segments are known to attract eukaryotic ribosomal translation initiation complex and thus promote translation initiation independently of the presence of the commonly utilized 5'-terminal 7mG cap structure. It is not yet clear whether the activity could be attributed to a common sequence or to a common secondary structure present in them. Such IRES regions were found in a broad range of +RNA viruses and in the untranslated regions of some eukaryotic cellular mRNAs.  
+        <a href="http://iresite.org/IRESite_web.php">Database 1</a>; <a href = "">Database 2</a></p>
+        <br>
+    <ul>
+        <li><a href="https://irespy.shinyapps.io/IRESpy/">IRESpy</a> - is a fast, reliable, high-throughput IRES online prediction tool. It provides a publicly available tool for all IRES researchers, and can be used in other genomics applications such as gene annotation and analysis of differential gene expression. 
+            <br>(<strong>Reference:</strong> Wang J & Gribskov (2019)  BMC Bioinformatics 20: 409). </li>
+        <br>
+        <li><a href="">IRESPred</a> -  is developed for prediction of both viral and cellular IRES using Support Vector Machine (SVM). The predictive model was built using 35 features that are based on sequence and structural properties of UTRs and the probabilities of interactions between UTR and small subunit ribosomal proteins (SSRPs). The model was found to have 75.51% accuracy, 75.75% sensitivity, 75.25% specificity, and 75.75% precision. 
+            <br>(<strong>Reference:</strong> Kolekar P et al. (2016) Sci Rep. 6: 27436).</li>
+        <br>
+        <li><a href="">IRESbase</a> is a comprehensive database of experimentally verified viral and eukaryotic internal ribosome entry sites (IRESs) with BLAST search capacity 
+            <br>(<strong>Reference:</strong> Wu TY et al. (2009) BMC Bioinformatics 10: 160).</li>
+        <br>
+    </ul>
+
+
+
+
+
+
+
+    </section>
+
+    <p class="updated"><strong>Updated:</strong> November, 2025</p>
+  </main>
+
+  <footer>
+    <p>© 2025 Internet Resources for Molecular Biologists</p>
+  </footer>
+
+<script>
+  const pages = [
+    { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
+    { name: "Carbohydrates", link: "carbohydrates.html" },
+    { name: "Buffers", link: "buffers.html" },
+    { name: "Metabolomics", link: "metabolomics.html" },
+    { name: "Genomics", link: "genomics.html" },
+    { name: "DNA Sequence Analysis", link: "https://google.com" },
+    { name: "Protein Sequence Analysis", link: "https://google.com" },
+    { name: "RNA Sequence Analysis", link: "https://google.com" },
+    { name: "Transcription Analysis", link: "https://google.com" },
+    { name: "Miscellaneous", link: "https://google.com" },
+    { name: "Software", link: "https://google.com" },
+    { name: "GenBank", link: "https://google.com" }
+  ];
+
+  const searchBar = document.getElementById("search-bar");
+  const resultsDiv = document.getElementById("search-results");
+
+  searchBar.addEventListener("input", searchSite);
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-container")) {
+      resultsDiv.innerHTML = "";
+    }
+  });
+
+  function searchSite() {
+    const input = searchBar.value.toLowerCase().trim();
+    resultsDiv.innerHTML = "";
+    if (input.length === 0) return;
+
+    const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
+    if (filtered.length > 0) {
+      filtered.forEach(page => {
+        const link = document.createElement("a");
+        link.href = page.link;
+        link.textContent = page.name;
+        link.target = "_self";
+        resultsDiv.appendChild(link);
+      });
+    } else {
+      resultsDiv.innerHTML = "<p>No matches found.</p>";
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buffers - Resource Hub</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="../index.html">Resource Hub</a></div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#categories">Categories</a></li>
+        <li><a href="../aboutUs.html">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
+      <div id="search-results" class="search-results"></div>
+    </div>
+  </header>
+
+  <div class="breadcrumbs">
+    <a href="../index.html">Home</a> ›
+    <a href="../index.html#categories">Categories</a> ›
+    <a href="translations.html">Translations</a> › 
+    <span>General Translations</span>
+    
+  </div>
+
+  <main class="content">
+    <h1>Eukartotic Genes Translations</h1>
+
+    <p>Because many genes in eukaryotes are interrupted by introns it can be difficult to identify the protein sequence of the gene. Furthermore, programs designed for recognizing intron/exon boundaries for a particular organism or group of organisms may not recognize all intron/exons boundaries. </p>
+    <p>No single site should be used, rather a combinatorial approach should be taken, incorporating BLAST and the programs outlined below, when studying eukaryotic genes. </p>
+    <p>The following programs identify intron-exon boundaries.  To help you assess the relative merits of each site I have attached GenBank files containing <a href = "https://molbiol-tools.ca/Homo_sapiens_gene.html">human</a>, <a href = "https://molbiol-tools.ca/Zea_mays_gene.html">plant</a> and <a href = "https://molbiol-tools.ca/Drosophila_melanogaster_gene.html">Drosophila</a> genes sequences, in which the submitters have designated the intron and exon sequences and the protein product.</p>
+
+    <ul>
+        <li><a href = "https://bioinf.uni-greifswald.de/augustus/submission.php">AUGUSTUS</a> - uses gene prediction in eukaryotic (Human, Drosophila, Arabidopsis, Brugia, Aedes, Coprinus, & Tribolium)sequences that is based on a generalized hidden Markov model, a probabilistic model of a sequence and its gene structure. The web server allows the user to impose constraints on the predicted gene structure 
+            (Reference: M. Stanke & B. Morgenstern. 2005. Nucl. Acids Res. 33: W465-W467). 
+            <a href="https://bioinf.uni-greifswald.de/webaugustus/">WebAUGUSTUS</a> is an updated version which provides an interface for training AUGUSTUS for predicting genes in genomes of novel species. It also enables you to predict genes in a genome sequence with already trained parameters.
+            (Reference: K.J. Hoff & M. Stanke. 2013. Nucl. Acids Res. 41(Web Server issue):W123-8.).</li>
+        <br>
+        <li><a href = "http://hollywood.mit.edu/GENSCAN.html">GENSCAN</a> (C. Burge, Massachusetts Institute of Technology, U.S.A.)</li>
+        <br>
+        <li><a href = "http://hollywood.mit.edu/genomescan.html">GenomeScan</a> (C. Burge, MIT, U.S.A.) - The newer version of GENSCAN this can be used to predict vertebrate, Arabidopsis & maize genes. </li>
+        <br>
+        <li><a href = "https://exon.gatech.edu/GeneMark/">GeneMark</a> (Georgia Institute of Technology, U.S.A.) - For several species pre-trained model parameters are ready and available through the <a href="https://genemark.bme.gatech.edu/GeneMark/gmhmme.cgi">GeneMark.hmm</a> page. For metagenomic analysis use <a href="https://genemark.bme.gatech.edu/GeneMark/meta_gmhmmp.cgi">MetaGeneMark</a> 
+            (Reference: Zhu, W. et al. 2010. Nucleic Acids Research; 38: e132)</li>
+        <br>
+        <li><a href = "https://genome.crg.cat/software/geneid/geneid.html">geneid</a> (Genome Informatics Research Lab, Universitat Pompeu Fabra, Spain) -  Prediction of human & Drosophila genes.</li>
+        <br>
+        <li><a href = "http://www.cbs.dtu.dk/services/HMMgene/">HMMgene</a> (Anders Krogh, Center for Biological Sequence Analysis, Denmark) -  Prediction of vertebrate and C. elegans genes.</li>
+        <br>
+        <li><a href = "https://bc.imb.sinica.edu.tw/SpliceAPP/">SpliceAPP</a> - Splice-Alternative Profile Predictor is an interactive web server for the prediction of RNA splicing in human, and a searchable database of collected splicing variants carried out by our prediction tool. 
+            (Reference: Huang AC et al (2024) BMC Genomics volume 25, Article number: 600)</li>
+        <br>
+        <li><a href = "https://www.fruitfly.org/seq_tools/splice.html">NNSPLICE</a> - Human and Drosophila Splice Site Prediction by Neural Network 
+            (Reference: Reese MG et al (1997) J Comp Biol 4(3): 311-323).</li>
+        <br>
+        <li><a href = "https://spliceport.cbcb.umd.edu/">SplicePort</a>: An Interactive Splice Site Analysis Tool - for splice-site analysis that allows the user to make splice-site predictions for submitted sequences. In addition, the user can also browse the rich catalog of features that underlies these predictions, and which we have found capable of providing high classification accuracy on human splice sites. Feature selection is optimized for human splice sites, but the selected features are likely to be predictive for other mammals as well. With our interactive feature browsing and visualization tool, the user can view and explore subsets of features used in splice-site prediction (either the features that account for the classification of a specific input sequence or the complete collection of features). Selected feature sets can be searched, ranked or displayed easily. The user can group features into clusters and frequency plot WebLogos can be generated. 
+            (Reference: Dogan, R.I. et al. 2007. Nucl. Acids Res. 35(Web Server issue): W285–W291).  </li>
+        <br>
+        <li><a href = "http://bioit2.irc.ugent.be/rover/splicerover/">SpliceRover</a> - is a predictive deep learning approach that outperforms the state-of-the-art in splice site prediction. SpliceRover uses convolutional neural networks (CNNs), which have been shown to obtain cutting edge performance on a wide variety of prediction tasks. We adapted this approach to deal with genomic sequence inputs, and show it consistently outperforms already existing approaches, with relative improvements in prediction effectiveness of up to 80.9% when measured in terms of false discovery rate. However, a major criticism of CNNs concerns their 'black box' nature, as mechanisms to obtain insight into their reasoning processes are limited. To facilitate interpretability of the SpliceRover models, we introduce an approach to visualize the biologically relevant information learnt. 
+            (Reference: Zuallaert J et al. (2018) Bioinformatics; 34(24): 4180-4188).</li>
+        <br>
+        <li><a href = "">iSS-PC</a> (identifying splicing sites via physical-chemical properties using deep sparse auto-encoder)  -  involves twelve physical-chemical properties of the dinucleotides within DNA into PseDNC to formulate given sequence samples via a battery of cross-covariance and auto-covariance transformations. 
+            (Reference: Chen W et al. Biomed Research International 2014: 623149).</li>
+        <br>
+        <li><a href = "http://umd.be/Redirect.html">HSF 3.0</a> Human SplicingFinder (Aix Marseille Université, France) - this  system combines 12 different algorithms to identify and predict mutations’ effect onsplicing motifs including the acceptor and donor splice sites, the branch point and auxiliary sequences known to either enhance or repress splicing: ExonicSplicing Enhancers (ESE) and Exonic Splicing Silencers (ESS). These algorithms are based on either PWM matrices, Maximum Entropy principle or MotifComparison method. is a tool to predict the effects of mutations on splicing signals or to identify splicing motifs in any human sequence. It contains all available matrices for auxiliary sequence prediction as well as new ones for binding sites of the 9G8 and Tra2-beta Serine-Arginine proteins and the hnRNP A1 ribonucleoprotein. We also developed new Position Weight Matrices to assess the strength of 5' and 3' splice sites and branch points.  
+            (Reference: FO Desmet et al. 2009. Nucleic Acid Research 37:e67).</li>
+        <br>
+        <li><a href = "https://www.mutationforecaster.com//">ASSEDA</a> (Automated Splice Site and Exon Definition Analyses) - is a tool to predict the effects of sequence changes that alter mRNA splicing in human diseases. We designed the system to evaluate changes in splice site strength based on information theory-based models of donor and acceptor splice sites. N.B. You need to register.</li>
+        <br>
+        <li><a href="http://www.cbs.dtu.dk/services/NetGene2/">NetGene2</a> - produces neural network predictions of splice sites in human, C. elegans and A. thaliana DNA. Restrictions: at most one sequence not less than 200 and not more than 100,000 nucleotides.
+            (Reference: S.M. Hebsgaard et al. 1996. Nucl. Acids Res. 24:3439-3452).</li>
+    </ul>
+
+
+    <h2>If you want to express a gene in an organism having different codon usage:</h2>
+    <ul>
+        <li><a href = ""></a></li>
+        <br>
+    </ul>
+
+    </section>
+
+    <p class="updated"><strong>Updated:</strong> November, 2025</p>
+  </main>
+
+  <footer>
+    <p>© 2025 Internet Resources for Molecular Biologists</p>
+  </footer>
+
+<script>
+  const pages = [
+    { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
+    { name: "Carbohydrates", link: "carbohydrates.html" },
+    { name: "Buffers", link: "buffers.html" },
+    { name: "Metabolomics", link: "metabolomics.html" },
+    { name: "Genomics", link: "genomics.html" },
+    { name: "DNA Sequence Analysis", link: "https://google.com" },
+    { name: "Protein Sequence Analysis", link: "https://google.com" },
+    { name: "RNA Sequence Analysis", link: "https://google.com" },
+    { name: "Transcription Analysis", link: "https://google.com" },
+    { name: "Miscellaneous", link: "https://google.com" },
+    { name: "Software", link: "https://google.com" },
+    { name: "GenBank", link: "https://google.com" }
+  ];
+
+  const searchBar = document.getElementById("search-bar");
+  const resultsDiv = document.getElementById("search-results");
+
+  searchBar.addEventListener("input", searchSite);
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-container")) {
+      resultsDiv.innerHTML = "";
+    }
+  });
+
+  function searchSite() {
+    const input = searchBar.value.toLowerCase().trim();
+    resultsDiv.innerHTML = "";
+    if (input.length === 0) return;
+
+    const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
+    if (filtered.length > 0) {
+      filtered.forEach(page => {
+        const link = document.createElement("a");
+        link.href = page.link;
+        link.textContent = page.name;
+        link.target = "_self";
+        resultsDiv.appendChild(link);
+      });
+    } else {
+      resultsDiv.innerHTML = "<p>No matches found.</p>";
+    }
+  }
+</script>
+
+</body>
+</html>
