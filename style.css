@@ -711,3 +711,44 @@ footer {
   object-fit: cover;
   display: block;
 }
+/* Google Search container */
+.search-container {
+  width: 300px;
+  max-width: 300px;
+}
+
+/* Search input */
+.gsc-input-box {
+  border-radius: 6px !important;
+  height: 36px;
+}
+
+/* Search button */
+.gsc-search-button-v2 {
+  padding: 6px 10px !important;
+  border-radius: 6px !important;
+}
+
+/* Remove big Google branding padding */
+.gsc-control-cse {
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+/* Google CSE autocomplete dropdown */
+.gssb_c,
+.gssb_c table,
+.gssb_c td {
+  color: #000 !important;
+  background: #fff !important;
+}
+
+/* Highlighted suggestion */
+.gssb_c .gssb_e {
+  background: #f1f5f9 !important;
+}
+
+/* Normal suggestion text */
+.gssb_a {
+  color: #000 !important;
+}

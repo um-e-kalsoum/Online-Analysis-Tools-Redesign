@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carbohydrates - Resource Hub</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google Custom Search Engine -->
+  <script async src="https://cse.google.com/cse.js?cx=5306da9863c9d4c77"></script>
 </head>
 <body>
   <header>
@@ -17,8 +20,7 @@
       </ul>
     </nav>
     <div class="search-container">
-      <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
-      <div id="search-results" class="search-results"></div>
+      <div class="gcse-search"></div>
     </div>
   </header>
 
@@ -98,51 +100,5 @@
   <footer>
     <p>© 2025 Internet Resources for Molecular Biologists</p>
   </footer>
-
-<script>
-  const pages = [
-    { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
-    { name: "Carbohydrates", link: "carbohydrates.html" },
-    { name: "DNA Sequence Analysis", link: "#" },
-    { name: "Genomics", link: "genomics.html" },
-    { name: "Metabolomics", link: "#" },
-    { name: "Protein Sequence Analysis", link: "#" },
-    { name: "RNA Sequence Analysis", link: "#" },
-    { name: "Transcription Analysis", link: "#" },
-    { name: "Miscellaneous", link: "#" },
-    { name: "Software", link: "#" },
-    { name: "GenBank", link: "#" }
-  ];
-
-  const searchBar = document.getElementById("search-bar");
-  const resultsDiv = document.getElementById("search-results");
-
-  searchBar.addEventListener("input", searchSite);
-
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".search-container")) {
-      resultsDiv.innerHTML = "";
-    }
-  });
-
-  function searchSite() {
-    const input = searchBar.value.toLowerCase().trim();
-    resultsDiv.innerHTML = "";
-    if (input.length === 0) return;
-
-    const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
-    if (filtered.length > 0) {
-      filtered.forEach(page => {
-        const link = document.createElement("a");
-        link.href = page.link;
-        link.textContent = page.name;
-        resultsDiv.appendChild(link);
-      });
-    } else {
-      resultsDiv.innerHTML = "<p>No matches found.</p>";
-    }
-  }
-</script>
-
 </body>
 </html>

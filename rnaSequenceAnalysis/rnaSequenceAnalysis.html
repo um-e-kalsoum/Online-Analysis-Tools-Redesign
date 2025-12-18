@@ -1,105 +1,118 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>RNA Sequence Analysis - Resource Hub</title>
+
   <link rel="stylesheet" href="../style.css">
+
+
+
+  <!-- Google Custom Search Engine -->
+
+  <script async src="https://cse.google.com/cse.js?cx=5306da9863c9d4c77"></script>
+
 </head>
+
 <body>
+
   <header>
+
     <div class="logo"><a href="index.html">Resource Hub</a></div>
+
     <nav>
+
       <ul>
+
         <li><a href="../index.html">Home</a></li>
+
         <li><a href="../index.html#categories">Categories</a></li>
+
         <li><a href="../aboutUs.html">About Us</a></li>
+
       </ul>
+
     </nav>
+
     <div class="search-container">
-      <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
-      <div id="search-results" class="search-results"></div>
+
+      <div class="gcse-search"></div>
+
     </div>
+
   </header>
 
+
+
   <div class="breadcrumbs">
+
     <a href="../index.html">Home</a> › 
+
     <a href="../index.html#categories">Categories</a> › 
+
     <span>RNA Sequence Analysis</span>
+
   </div>
 
+
+
   <main class="content">
+
     <h1>RNA Sequence Analysis</h1>
+
     <p>
+
       In addition to ribosomal and transfer RNAs these tools allow one to predict microRNAs.  
+
       In addition, these sites can be used to identify motifs including promoters, terminators 
+
       and pseudoknots.  Bothe the predicted secondary and tertiary structures of small RNAs can 
+
       be determined.
+
     </p>
 
+
+
     <section class="categories">
+
       <h2>Subcategories</h2>
+
       <div class="pill-container">
+
         <a href="pg1rnaSeq.html" class="pill">RNA Analysis</a>
+
         <a href="pg2rnaSeq.html" class="pill">Promoters & Terminators</a>
+
         <a href="pg3rnaSeq.html" class="pill">Transcription Factors</a>
+
       </div>
+
     </section>
 
+
+
     <p class="updated"><strong>Updated:</strong> October, 2025</p>
+
   </main>
 
+
+
   <footer>
+
     <p>© 2025 Internet Resources for Molecular Biologists</p>
+
   </footer>
 
-<script>
-  const pages = [
-    { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
-    { name: "Carbohydrates", link: "carbohydrates.html" },
-    { name: "DNA Sequence Analysis", link: "dna-sequencing.html" },
-    { name: "Genomics", link: "genomics.html" },
-    { name: "Metabolomics", link: "metabolomics.html" },
-    { name: "Protein Sequence Analysis", link: "protein-sequence.html" },
-    { name: "RNA Sequence Analysis", link: "rna-sequence.html" },
-    { name: "Transcription Analysis", link: "#" },
-    { name: "Miscellaneous", link: "#" },
-    { name: "Software", link: "#" },
-    { name: "GenBank", link: "#" }
-  ];
 
-  const searchBar = document.getElementById("search-bar");
-  const resultsDiv = document.getElementById("search-results");
-
-  searchBar.addEventListener("input", searchSite);
-
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".search-container")) {
-      resultsDiv.innerHTML = "";
-    }
-  });
-
-  function searchSite() {
-    const input = searchBar.value.toLowerCase().trim();
-    resultsDiv.innerHTML = "";
-
-    if (input.length === 0) return;
-
-    const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
-
-    if (filtered.length > 0) {
-      filtered.forEach(page => {
-        const link = document.createElement("a");
-        link.href = page.link;
-        link.textContent = page.name;
-        link.target = "_self";
-        resultsDiv.appendChild(link);
-      });
-    } else {
-      resultsDiv.innerHTML = "<p>No matches found.</p>";
-    }
-  }
-</script>
 
 </body>
+
 </html>
+

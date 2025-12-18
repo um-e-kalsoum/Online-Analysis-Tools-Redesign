@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Resource Hub</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google Custom Search Engine -->
+  <script async src="https://cse.google.com/cse.js?cx=5306da9863c9d4c77"></script>
 </head>
 <body>
   <header>
@@ -17,8 +20,7 @@
       </ul>
     </nav>
     <div class="search-container">
-      <input type="text" id="search-bar" placeholder="Search categories..." onkeyup="searchSite()">
-      <div id="search-results" class="search-results"></div>
+      <div class="gcse-search"></div>
     </div>
   </header>
 
@@ -108,56 +110,5 @@
   <footer>
     <p>© 2025 Internet Resources for Molecular Biologists</p>
   </footer>
-
-<script>
-  const pages = [
-    { name: "Home", link: "index.html" },
-    { name: "About Us", link: "about.html" },
-    { name: "Bioinformatic Tutorials", link: "bioinformatics.html" },
-    { name: "Carbohydrates", link: "carbohydrates.html" },
-    { name: "DNA Sequence Analysis", link: "dna-sequencing.html" },
-    { name: "Genomics", link: "genomics.html" },
-    { name: "Metabolomics", link: "metabolomics.html" },
-    { name: "Protein Sequence Analysis", link: "protein-sequence.html" },
-    { name: "RNA Sequence Analysis", link: "rna-sequence.html" },
-    { name: "Transcription Analysis", link: "transcription-analysis.html" },
-    { name: "Miscellaneous", link: "miscellaneous.html" },
-      { name: "Software", link: "software/software.html" },
-    { name: "GenBank", link: "genbank.html" }
-  ];
-
-  const searchBar = document.getElementById("search-bar");
-  const resultsDiv = document.getElementById("search-results");
-
-  searchBar.addEventListener("input", searchSite);
-
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".search-container")) {
-      resultsDiv.innerHTML = "";
-    }
-  });
-
-  function searchSite() {
-    const input = searchBar.value.toLowerCase().trim();
-    resultsDiv.innerHTML = "";
-
-    if (input.length === 0) return;
-
-    const filtered = pages.filter(page => page.name.toLowerCase().includes(input));
-
-    if (filtered.length > 0) {
-      filtered.forEach(page => {
-        const link = document.createElement("a");
-        link.href = page.link;
-        link.textContent = page.name;
-        link.target = "_self";
-        resultsDiv.appendChild(link);
-      });
-    } else {
-      resultsDiv.innerHTML = "<p>No matches found.</p>";
-    }
-  }
-</script>
-
 </body>
 </html>
